@@ -6,7 +6,8 @@ from api.epo_client import EPOClient
 from datetime import datetime
 from data.parsers.claims_extractor import ClaimsParser
 from data.parsers.claims_analysis import ClaimAnalyzer
-
+from prosecution_history_estoppel import ProsecutionHistoryEstoppel  
+from prior_art_correlator import PriorArtCorrelator
 
 def format_date(date_str):
     """
@@ -125,10 +126,61 @@ def clean_legal_text(text):
     # Handle plain string
     return str(text)
 
+def display_prior_art(data):
+    """Render Prior Art Correlation results using PriorArtCorrelator"""
+    try:
+        st.markdown("#### Prior Art Correlation")
+        correlator = PriorArtCorrelator(data)
+        results = correlator.match_to_rejections()
+
+        if not results:
+            st.info("No citations found in the data.")
+            return
+
+        for idx, item in enumerate(results, start=1):
+            citation = item.get("citation", {})
+            raw = citation.get("raw", "") or item.get("citation", {}).get("raw", "")
+            norm = f"{citation.get('country','')}{citation.get('number','')}{citation.get('kind','')}".strip() or raw
+            confidence = item.get("confidence", "low")
+            source = item.get("source", "unknown")
+            matches = item.get("matches", [])
+
+            header = f"{idx}. {norm} — {source.upper()} — Confidence: {confidence.upper()}"
+            with st.expander(header, expanded=False):
+                st.write("**Raw citation:**", raw)
+                st.write("**Normalized:**", citation)
+                st.write("**Matched events:**", len(matches))
+                if matches:
+                    for m in matches:
+                        # show event code, description and snippet of event text
+                        code = m.get("code") or m.get("raw", {}).get("@code", "")
+                        desc = m.get("desc") or m.get("raw", {}).get("@desc", "")
+                        text = (m.get("text") or "")[:600]
+                        st.markdown(f"- **{code}** — {desc}")
+                        if text:
+                            st.code(text)
+                else:
+                    st.write("No heuristic matches found for this citation.")
+
+                # Offer LLM re-check for ambiguous/low-confidence items
+                if confidence == "low":
+                    if st.button(f"Run LLM check for citation {idx}", key=f"llm_{idx}"):
+                        with st.spinner("Calling LLM for disambiguation..."):
+                            llm_note = correlator.query_llm_for_ambiguous(citation, matches)
+                            st.markdown("**LLM analysis:**")
+                            st.write(llm_note)
+
+    except Exception as e:
+        st.error(f"Prior art rendering failed: {e}")
+
 def display_legal_events(data):
     try:
         st.markdown("#### Legal Events Timeline")
         legal_data = data.get("legal", {}).get("ops:world-patent-data", {}).get("ops:patent-family", {})
+        
+        # Initialize estoppel analyzer with the data
+        estoppel_analyzer = ProsecutionHistoryEstoppel(data)
+        estoppel_analyzer.analyze_events()
         
         if "ops:family-member" in legal_data:
             for member in legal_data["ops:family-member"]:
@@ -168,11 +220,9 @@ def display_legal_events(data):
                                 # Show details with better formatting
                                 if details_text:
                                     st.markdown("**Details:**")
-                                    # Split into sections if multiple items
                                     sections = details_text.split('\n• ')
                                     for section in sections:
                                         if section.strip():
-                                            # Remove redundant prefixes and codes
                                             cleaned = re.sub(r'REFERENCE TO A NATIONAL CODE\s+', '', section)
                                             cleaned = re.sub(r'Ref\s+', '', cleaned)
                                             st.markdown(f"• {cleaned.strip()}")
@@ -181,6 +231,23 @@ def display_legal_events(data):
                                 effect = event.get("@infl", "").strip()
                                 if effect and effect != "+":
                                     st.write("**Effect:**", effect)
+                                
+                                # Show estoppel analysis if available
+                                if event_desc in estoppel_analyzer.estoppel_labels:
+                                    st.markdown("---")
+                                    st.markdown("**Estoppel Analysis:**")
+                                    st.markdown(estoppel_analyzer.estoppel_labels[event_desc])
+
+        # Display Estoppel Analysis Results
+        st.markdown("---")
+        st.markdown("### Prosecution History Estoppel Analysis")
+        if estoppel_analyzer.estoppel_labels:
+            for event, analysis in estoppel_analyzer.estoppel_labels.items():
+                with st.expander(f"Estoppel Event: {event}"):
+                    st.markdown("**AI Analysis:**")
+                    st.markdown(analysis)
+        else:
+            st.info("No potential prosecution history estoppel events identified.")
 
     except Exception as e:
         st.error(f"Error displaying legal events: {str(e)}")
@@ -243,8 +310,19 @@ def main():
                 # Get patent data
                 data = client.get_patent_data(patent_number)
 
-                # Display results in tabs
-                tab1, tab2, tab3, tab4 = st.tabs(["Bibliographic Data", "Legal Status", "Patent Family", "Claims Analysis"])
+                # Pre-process data that's used across tabs
+                estoppel_analyzer = ProsecutionHistoryEstoppel(data)
+                prior_art_correlator = PriorArtCorrelator(data)
+                claims = ClaimsParser.extract_claims(data)
+                
+                # Display results in tabs (optimized order)
+                tab1, tab2, tab3, tab4, tab5 = st.tabs([
+                    "Bibliographic Data",
+                    "Legal Status", 
+                    "Claims Analysis",
+                    "Prior Art",
+                    "Patent Family"
+                ])
                 
                 with tab1:
                     display_bibliographic_data(data)
@@ -253,13 +331,8 @@ def main():
                     display_legal_events(data)
 
                 with tab3:
-                    display_family_data(data)
-
-                # --- Claims analysis integration (added) ---
-                with tab4:
                     try:
                         st.markdown("#### Claims Extraction & Analysis")
-                        claims = ClaimsParser.extract_claims(data)
                         st.write(f"Extracted {len(claims)} claim(s).")
 
                         # instantiate analyzer (uses OPENROUTER_API_KEY env if set)
@@ -271,13 +344,9 @@ def main():
                             for s in summaries:
                                 st.write(f"- Claim {s.get('id')}: {s.get('summary')}")
                             
-                            # If multiple claim sets are provided (rare in single JSON), attempt comparison:
-                            # Look for 'claims_versions' key or 'claims_variants' in raw data as optional extension
                             alt_claims_node = data.get("claims_versions") or data.get("claims_variants")
                             if alt_claims_node:
-                                # normalize to first alt set (basic)
                                 alt_set = alt_claims_node if isinstance(alt_claims_node, list) else [alt_claims_node]
-                                # take first alt that looks like claim list
                                 alt_claims = []
                                 for cand in alt_set:
                                     if isinstance(cand, dict) and "claim" in cand:
@@ -301,6 +370,12 @@ def main():
                             st.info("No claims extracted from JSON.")
                     except Exception as e:
                         st.error(f"Claims analysis failed: {e}")
+
+                with tab4:
+                    display_prior_art(data)
+
+                with tab5:
+                    display_family_data(data)
 
                 # Add download button for full JSON
                 st.download_button(

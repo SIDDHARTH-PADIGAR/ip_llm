@@ -1,0 +1,3378 @@
+{
+  "prior_art_results": [
+    {
+      "citation": {
+        "country": "EP",
+        "number": "99203729",
+        "kind": "A",
+        "raw": "EP    99203729A"
+      },
+      "matches": [
+        {
+          "code": "17Q ",
+          "desc": "FIRST EXAMINATION REPORT DESPATCHED",
+          "text": "FIRST EXAMINATION REPORT DESPATCHED EP    99203729A  2002-06-0517Q +FIRST EXAMINATION REPORT DESPATCHED Effective DATE 20020423",
+          "raw": {
+            "@code": "17Q ",
+            "@desc": "FIRST EXAMINATION REPORT DESPATCHED",
+            "@infl": "+",
+            "@dateMigr": "00010101",
+            "ops:pre": {
+              "@line": "00001",
+              "#text": "EP    99203729A  2002-06-0517Q +FIRST EXAMINATION REPORT DESPATCHED Effective DATE 20020423"
+            },
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2002-06-05"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "17Q"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2003-01-01"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2003-01-31"
+            },
+            "ops:L500EP": {
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20020423"
+              }
+            }
+          }
+        },
+        {
+          "code": "AK  ",
+          "desc": "DESIGNATED CONTRACTING STATES",
+          "text": "DESIGNATED CONTRACTING STATES EP    99203729A  2003-02-12AK  +DESIGNATED CONTRACTING STATES Designated State(s) AT BE CH CY DE DK ES FI FR GB GR IE IT LI LU MC NL PT SE",
+          "raw": {
+            "@code": "AK  ",
+            "@desc": "DESIGNATED CONTRACTING STATES",
+            "@infl": "+",
+            "@dateMigr": "00010101",
+            "ops:pre": {
+              "@line": "00001",
+              "#text": "EP    99203729A  2003-02-12AK  +DESIGNATED CONTRACTING STATES Designated State(s) AT BE CH CY DE DK ES FI FR GB GR IE IT LI LU MC NL PT SE"
+            },
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-02-12"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "AK"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "0001-01-01"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2003-02-20"
+            },
+            "ops:L500EP": {
+              "ops:L507EP": {
+                "@desc": "Designated State(s)",
+                "#text": "AT BE CH CY DE DK ES FI FR GB GR IE IT LI LU MC NL PT SE"
+              }
+            }
+          }
+        },
+        {
+          "code": "REG ",
+          "desc": "REFERENCE TO A NATIONAL CODE",
+          "text": "REFERENCE TO A NATIONAL CODE EP    99203729A  2003-02-14REG  REFERENCE TO A NATIONAL CODE Ref Country Code CH EP    99203729A  2003-02-14REG  REFERENCE TO A NATIONAL CODE Ref Legal Event Code EP",
+          "raw": {
+            "@code": "REG ",
+            "@desc": "REFERENCE TO A NATIONAL CODE",
+            "@infl": " ",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2003-02-14REG  REFERENCE TO A NATIONAL CODE Ref Country Code CH"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2003-02-14REG  REFERENCE TO A NATIONAL CODE Ref Legal Event Code EP"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-02-14"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "REG"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2003-02-27"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2003-02-25"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "CH"
+              },
+              "ops:L502EP": {
+                "@desc": "Ref Legal Event Code",
+                "@descData": "EUROPEAN PATENT TAKES EFFECT AS A NATIONAL PATENT IN CH/LI",
+                "@infl": "+",
+                "#text": "EP"
+              }
+            }
+          }
+        },
+        {
+          "code": "REF ",
+          "desc": "CORRESPONDS TO:",
+          "text": "CORRESPONDS TO: EP    99203729A  2003-03-20REF  CORRESPONDS TO: Ref Document Number 69905327 EP    99203729A  2003-03-20REF  CORRESPONDS TO: Country of Ref Document DE EP    99203729A  2003-03-20REF  CORRESPONDS TO: DATE OF REF DOCUMENT 20030320 EP    99203729A  2003-03-20REF  CORRESPONDS TO: Kind Code of Ref Document P",
+          "raw": {
+            "@code": "REF ",
+            "@desc": "CORRESPONDS TO:",
+            "@infl": " ",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2003-03-20REF  CORRESPONDS TO: Ref Document Number 69905327"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2003-03-20REF  CORRESPONDS TO: Country of Ref Document DE"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2003-03-20REF  CORRESPONDS TO: DATE OF REF DOCUMENT 20030320"
+              },
+              {
+                "@line": "00004",
+                "#text": "EP    99203729A  2003-03-20REF  CORRESPONDS TO: Kind Code of Ref Document P"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-03-20"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "REF"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2003-03-20"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2003-03-20"
+            },
+            "ops:L500EP": {
+              "ops:L503EP": {
+                "@desc": "Ref Document Number",
+                "#text": "69905327"
+              },
+              "ops:L504EP": {
+                "@desc": "Country of Ref Document",
+                "#text": "DE"
+              },
+              "ops:L505EP": {
+                "@desc": "DATE OF REF DOCUMENT",
+                "#text": "20030320"
+              },
+              "ops:L506EP": {
+                "@desc": "Kind Code of Ref Document",
+                "#text": "P"
+              }
+            }
+          }
+        },
+        {
+          "code": "AK  ",
+          "desc": "DESIGNATED CONTRACTING STATES",
+          "text": "DESIGNATED CONTRACTING STATES EP    99203729A  2000-05-17AK  +DESIGNATED CONTRACTING STATES Kind Code of Ref Document A1 EP    99203729A  2000-05-17AK  +DESIGNATED CONTRACTING STATES Designated State(s) AT BE CH CY DE DK ES FI FR GB GR IE IT LI LU MC NL PT SE",
+          "raw": {
+            "@code": "AK  ",
+            "@desc": "DESIGNATED CONTRACTING STATES",
+            "@infl": "+",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2000-05-17AK  +DESIGNATED CONTRACTING STATES Kind Code of Ref Document A1"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2000-05-17AK  +DESIGNATED CONTRACTING STATES Designated State(s) AT BE CH CY DE DK ES FI FR GB GR IE IT LI LU MC NL PT SE"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2000-05-17"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "AK"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2003-01-01"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2003-05-28"
+            },
+            "ops:L500EP": {
+              "ops:L506EP": {
+                "@desc": "Kind Code of Ref Document",
+                "#text": "A1"
+              },
+              "ops:L507EP": {
+                "@desc": "Designated State(s)",
+                "#text": "AT BE CH CY DE DK ES FI FR GB GR IE IT LI LU MC NL PT SE"
+              }
+            }
+          }
+        },
+        {
+          "code": "AX  ",
+          "desc": "REQUEST FOR EXTENSION OF THE EUROPEAN PATENT",
+          "text": "REQUEST FOR EXTENSION OF THE EUROPEAN PATENT EP    99203729A  2000-05-17AX  +REQUEST FOR EXTENSION OF THE EUROPEAN PATENT Free Format Text AL;LT;LV;MK;RO;SI",
+          "raw": {
+            "@code": "AX  ",
+            "@desc": "REQUEST FOR EXTENSION OF THE EUROPEAN PATENT",
+            "@infl": "+",
+            "@dateMigr": "00010101",
+            "ops:pre": {
+              "@line": "00001",
+              "#text": "EP    99203729A  2000-05-17AX  +REQUEST FOR EXTENSION OF THE EUROPEAN PATENT Free Format Text AL;LT;LV;MK;RO;SI"
+            },
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2000-05-17"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "AX"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2003-01-01"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2003-05-28"
+            },
+            "ops:L500EP": {
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "AL;LT;LV;MK;RO;SI"
+              }
+            }
+          }
+        },
+        {
+          "code": "17P ",
+          "desc": "REQUEST FOR EXAMINATION FILED",
+          "text": "REQUEST FOR EXAMINATION FILED EP    99203729A  2000-12-2717P +REQUEST FOR EXAMINATION FILED Effective DATE 20001027",
+          "raw": {
+            "@code": "17P ",
+            "@desc": "REQUEST FOR EXAMINATION FILED",
+            "@infl": "+",
+            "@dateMigr": "00010101",
+            "ops:pre": {
+              "@line": "00001",
+              "#text": "EP    99203729A  2000-12-2717P +REQUEST FOR EXAMINATION FILED Effective DATE 20001027"
+            },
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2000-12-27"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "17P"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "0001-01-01"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2003-05-28"
+            },
+            "ops:L500EP": {
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20001027"
+              }
+            }
+          }
+        },
+        {
+          "code": "AKX ",
+          "desc": "DESIGNATION FEES PAID",
+          "text": "DESIGNATION FEES PAID EP    99203729A  2001-01-31AKX +DESIGNATION FEES PAID Free Format Text AT BE CH CY DE DK ES FI FR GB GR IE IT LI LU MC NL PT SE",
+          "raw": {
+            "@code": "AKX ",
+            "@desc": "DESIGNATION FEES PAID",
+            "@infl": "+",
+            "@dateMigr": "00010101",
+            "ops:pre": {
+              "@line": "00001",
+              "#text": "EP    99203729A  2001-01-31AKX +DESIGNATION FEES PAID Free Format Text AT BE CH CY DE DK ES FI FR GB GR IE IT LI LU MC NL PT SE"
+            },
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2001-01-31"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "AKX"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2015-09-19"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2003-05-28"
+            },
+            "ops:L500EP": {
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "AT BE CH CY DE DK ES FI FR GB GR IE IT LI LU MC NL PT SE"
+              }
+            }
+          }
+        },
+        {
+          "code": "REG ",
+          "desc": "REFERENCE TO A NATIONAL CODE",
+          "text": "REFERENCE TO A NATIONAL CODE EP    99203729A  2003-02-12REG  REFERENCE TO A NATIONAL CODE Ref Country Code GB EP    99203729A  2003-02-12REG  REFERENCE TO A NATIONAL CODE Ref Legal Event Code FG4D",
+          "raw": {
+            "@code": "REG ",
+            "@desc": "REFERENCE TO A NATIONAL CODE",
+            "@infl": " ",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2003-02-12REG  REFERENCE TO A NATIONAL CODE Ref Country Code GB"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2003-02-12REG  REFERENCE TO A NATIONAL CODE Ref Legal Event Code FG4D"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-02-12"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "REG"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2018-04-14"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2003-06-20"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "GB"
+              },
+              "ops:L502EP": {
+                "@desc": "Ref Legal Event Code",
+                "@descData": "EUROPEAN PATENT GRANTED",
+                "@infl": "+",
+                "#text": "FG4D"
+              }
+            }
+          }
+        },
+        {
+          "code": "REG ",
+          "desc": "REFERENCE TO A NATIONAL CODE",
+          "text": "REFERENCE TO A NATIONAL CODE EP    99203729A  2003-08-29REG  REFERENCE TO A NATIONAL CODE Ref Country Code CH EP    99203729A  2003-08-29REG  REFERENCE TO A NATIONAL CODE Ref Legal Event Code PL",
+          "raw": {
+            "@code": "REG ",
+            "@desc": "REFERENCE TO A NATIONAL CODE",
+            "@infl": " ",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2003-08-29REG  REFERENCE TO A NATIONAL CODE Ref Country Code CH"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2003-08-29REG  REFERENCE TO A NATIONAL CODE Ref Legal Event Code PL"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-08-29"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "REG"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2003-09-25"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2003-09-25"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "CH"
+              },
+              "ops:L502EP": {
+                "@desc": "Ref Legal Event Code",
+                "@descData": "PATENT CEASED",
+                "@infl": "-",
+                "#text": "PL"
+              }
+            }
+          }
+        },
+        {
+          "code": "REG ",
+          "desc": "REFERENCE TO A NATIONAL CODE",
+          "text": "REFERENCE TO A NATIONAL CODE EP    99203729A  2003-07-09REG  REFERENCE TO A NATIONAL CODE Ref Country Code IE EP    99203729A  2003-07-09REG  REFERENCE TO A NATIONAL CODE Ref Legal Event Code FG4D",
+          "raw": {
+            "@code": "REG ",
+            "@desc": "REFERENCE TO A NATIONAL CODE",
+            "@infl": " ",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2003-07-09REG  REFERENCE TO A NATIONAL CODE Ref Country Code IE"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2003-07-09REG  REFERENCE TO A NATIONAL CODE Ref Legal Event Code FG4D"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-07-09"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "REG"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2003-10-30"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2003-10-28"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "IE"
+              },
+              "ops:L502EP": {
+                "@desc": "Ref Legal Event Code",
+                "@descData": "EUROPEAN PATENTS GRANTED DESIGNATING IRELAND",
+                "@infl": "+",
+                "#text": "FG4D"
+              }
+            }
+          }
+        },
+        {
+          "code": "EN  ",
+          "desc": "FR: TRANSLATION NOT FILED",
+          "text": "FR: TRANSLATION NOT FILED EP    99203729A  2004-01-02EN  -FR: TRANSLATION NOT FILED",
+          "raw": {
+            "@code": "EN  ",
+            "@desc": "FR: TRANSLATION NOT FILED",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": {
+              "@line": "00001",
+              "#text": "EP    99203729A  2004-01-02EN  -FR: TRANSLATION NOT FILED"
+            },
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2004-01-02"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "EN"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2004-01-29"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2004-01-27"
+            },
+            "ops:L500EP": null
+          }
+        },
+        {
+          "code": "BECN",
+          "desc": "BE: CHANGE OF HOLDER'S NAME",
+          "text": "BE: CHANGE OF HOLDER'S NAME EP    99203729A  2003-03-03BECN BE: CHANGE OF HOLDER'S NAME",
+          "raw": {
+            "@code": "BECN",
+            "@desc": "BE: CHANGE OF HOLDER'S NAME",
+            "@infl": " ",
+            "@dateMigr": "00010101",
+            "ops:pre": {
+              "@line": "00001",
+              "#text": "EP    99203729A  2003-03-03BECN BE: CHANGE OF HOLDER'S NAME"
+            },
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-03-03"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "BECN"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2004-02-05"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2004-02-03"
+            },
+            "ops:L500EP": null
+          }
+        },
+        {
+          "code": "26N ",
+          "desc": "NO OPPOSITION FILED",
+          "text": "NO OPPOSITION FILED EP    99203729A  2004-02-0426N +NO OPPOSITION FILED Effective DATE 20031113",
+          "raw": {
+            "@code": "26N ",
+            "@desc": "NO OPPOSITION FILED",
+            "@infl": "+",
+            "@dateMigr": "00010101",
+            "ops:pre": {
+              "@line": "00001",
+              "#text": "EP    99203729A  2004-02-0426N +NO OPPOSITION FILED Effective DATE 20031113"
+            },
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2004-02-04"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "26N"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2004-02-05"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2004-02-05"
+            },
+            "ops:L500EP": {
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20031113"
+              }
+            }
+          }
+        },
+        {
+          "code": "REG ",
+          "desc": "REFERENCE TO A NATIONAL CODE",
+          "text": "REFERENCE TO A NATIONAL CODE EP    99203729A  2004-08-25REG  REFERENCE TO A NATIONAL CODE Ref Country Code IE EP    99203729A  2004-08-25REG  REFERENCE TO A NATIONAL CODE Ref Legal Event Code MM4A",
+          "raw": {
+            "@code": "REG ",
+            "@desc": "REFERENCE TO A NATIONAL CODE",
+            "@infl": " ",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2004-08-25REG  REFERENCE TO A NATIONAL CODE Ref Country Code IE"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2004-08-25REG  REFERENCE TO A NATIONAL CODE Ref Legal Event Code MM4A"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2004-08-25"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "REG"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2004-09-23"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2004-09-21"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "IE"
+              },
+              "ops:L502EP": {
+                "@desc": "Ref Legal Event Code",
+                "@descData": "PATENT LAPSED",
+                "@infl": "-",
+                "#text": "MM4A"
+              }
+            }
+          }
+        },
+        {
+          "code": "PG25",
+          "desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code CH EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030212",
+          "raw": {
+            "@code": "PG25",
+            "@desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code CH"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030212"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-02-12"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PG25"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2008-01-17"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2008-01-17"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "CH"
+              },
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20030212"
+              }
+            }
+          }
+        },
+        {
+          "code": "PG25",
+          "desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2003-11-08PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code CY EP    99203729A  2003-11-08PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT EP    99203729A  2003-11-08PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20031108",
+          "raw": {
+            "@code": "PG25",
+            "@desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2003-11-08PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code CY"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2003-11-08PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2003-11-08PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20031108"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-11-08"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PG25"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2008-01-17"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2008-01-17"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "CY"
+              },
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20031108"
+              }
+            }
+          }
+        },
+        {
+          "code": "PG25",
+          "desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2003-05-13PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code DE EP    99203729A  2003-05-13PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT EP    99203729A  2003-05-13PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030513",
+          "raw": {
+            "@code": "PG25",
+            "@desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2003-05-13PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code DE"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2003-05-13PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2003-05-13PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030513"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-05-13"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PG25"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2008-01-17"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2008-01-17"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "DE"
+              },
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20030513"
+              }
+            }
+          }
+        },
+        {
+          "code": "PG25",
+          "desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2003-05-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code DK EP    99203729A  2003-05-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT EP    99203729A  2003-05-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030512",
+          "raw": {
+            "@code": "PG25",
+            "@desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2003-05-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code DK"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2003-05-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2003-05-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030512"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-05-12"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PG25"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2008-01-17"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2008-01-17"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "DK"
+              },
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20030512"
+              }
+            }
+          }
+        },
+        {
+          "code": "PG25",
+          "desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2003-08-28PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code ES EP    99203729A  2003-08-28PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT EP    99203729A  2003-08-28PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030828",
+          "raw": {
+            "@code": "PG25",
+            "@desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2003-08-28PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code ES"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2003-08-28PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2003-08-28PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030828"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-08-28"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PG25"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2008-01-17"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2008-01-17"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "ES"
+              },
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20030828"
+              }
+            }
+          }
+        },
+        {
+          "code": "PG25",
+          "desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code FI EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030212",
+          "raw": {
+            "@code": "PG25",
+            "@desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code FI"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030212"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-02-12"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PG25"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2008-01-17"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2008-01-17"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "FI"
+              },
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20030212"
+              }
+            }
+          }
+        },
+        {
+          "code": "PG25",
+          "desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code FR EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030212",
+          "raw": {
+            "@code": "PG25",
+            "@desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code FR"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030212"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-02-12"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PG25"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2008-01-17"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2008-01-17"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "FR"
+              },
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20030212"
+              }
+            }
+          }
+        },
+        {
+          "code": "PG25",
+          "desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code GR EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030212",
+          "raw": {
+            "@code": "PG25",
+            "@desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code GR"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030212"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-02-12"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PG25"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2008-01-17"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2008-01-17"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "GR"
+              },
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20030212"
+              }
+            }
+          }
+        },
+        {
+          "code": "PG25",
+          "desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2003-11-10PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code IE EP    99203729A  2003-11-10PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES EP    99203729A  2003-11-10PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20031110",
+          "raw": {
+            "@code": "PG25",
+            "@desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2003-11-10PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code IE"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2003-11-10PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2003-11-10PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20031110"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-11-10"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PG25"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2008-01-17"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2008-01-17"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "IE"
+              },
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES"
+              },
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20031110"
+              }
+            }
+          }
+        },
+        {
+          "code": "PG25",
+          "desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code LI EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030212",
+          "raw": {
+            "@code": "PG25",
+            "@desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code LI"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030212"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-02-12"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PG25"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2008-01-17"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2008-01-17"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "LI"
+              },
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20030212"
+              }
+            }
+          }
+        },
+        {
+          "code": "PG25",
+          "desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2003-11-08PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code LU EP    99203729A  2003-11-08PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES EP    99203729A  2003-11-08PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20031108",
+          "raw": {
+            "@code": "PG25",
+            "@desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2003-11-08PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code LU"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2003-11-08PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2003-11-08PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20031108"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-11-08"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PG25"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2008-01-17"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2008-01-17"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "LU"
+              },
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES"
+              },
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20031108"
+              }
+            }
+          }
+        },
+        {
+          "code": "PG25",
+          "desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2003-11-30PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code MC EP    99203729A  2003-11-30PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES EP    99203729A  2003-11-30PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20031130",
+          "raw": {
+            "@code": "PG25",
+            "@desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2003-11-30PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code MC"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2003-11-30PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2003-11-30PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20031130"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-11-30"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PG25"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2011-07-14"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2008-01-17"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "MC"
+              },
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES"
+              },
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20031130"
+              }
+            }
+          }
+        },
+        {
+          "code": "PG25",
+          "desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2003-05-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code PT EP    99203729A  2003-05-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT EP    99203729A  2003-05-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030512",
+          "raw": {
+            "@code": "PG25",
+            "@desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2003-05-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code PT"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2003-05-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2003-05-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030512"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-05-12"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PG25"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2008-01-17"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2008-01-17"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "PT"
+              },
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20030512"
+              }
+            }
+          }
+        },
+        {
+          "code": "PG25",
+          "desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2003-05-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code SE EP    99203729A  2003-05-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT EP    99203729A  2003-05-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030512",
+          "raw": {
+            "@code": "PG25",
+            "@desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2003-05-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code SE"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2003-05-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2003-05-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030512"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-05-12"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PG25"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2008-01-17"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2008-01-17"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "SE"
+              },
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20030512"
+              }
+            }
+          }
+        },
+        {
+          "code": "PGFP",
+          "desc": "ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2010-02-26PGFP+ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code NL EP    99203729A  2010-02-26PGFP+ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Payment DATE 20091130 EP    99203729A  2010-02-26PGFP+ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Year of Fee Payment 11",
+          "raw": {
+            "@code": "PGFP",
+            "@desc": "ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "+",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2010-02-26PGFP+ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code NL"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2010-02-26PGFP+ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Payment DATE 20091130"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2010-02-26PGFP+ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Year of Fee Payment 11"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2010-02-26"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PGFP"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2010-03-04"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2010-03-02"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "NL"
+              },
+              "ops:L518EP": {
+                "@desc": "Payment DATE",
+                "#text": "20091130"
+              },
+              "ops:L520EP": {
+                "@desc": "Year of Fee Payment",
+                "#text": "11"
+              }
+            }
+          }
+        },
+        {
+          "code": "PGFP",
+          "desc": "ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2010-04-30PGFP+ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code GB EP    99203729A  2010-04-30PGFP+ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Payment DATE 20091130 EP    99203729A  2010-04-30PGFP+ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Year of Fee Payment 11",
+          "raw": {
+            "@code": "PGFP",
+            "@desc": "ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "+",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2010-04-30PGFP+ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code GB"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2010-04-30PGFP+ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Payment DATE 20091130"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2010-04-30PGFP+ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Year of Fee Payment 11"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2010-04-30"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PGFP"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2010-05-06"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2010-05-04"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "GB"
+              },
+              "ops:L518EP": {
+                "@desc": "Payment DATE",
+                "#text": "20091130"
+              },
+              "ops:L520EP": {
+                "@desc": "Year of Fee Payment",
+                "#text": "11"
+              }
+            }
+          }
+        },
+        {
+          "code": "PGFP",
+          "desc": "ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2010-06-30PGFP+ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code BE EP    99203729A  2010-06-30PGFP+ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Payment DATE 20091130 EP    99203729A  2010-06-30PGFP+ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Year of Fee Payment 11",
+          "raw": {
+            "@code": "PGFP",
+            "@desc": "ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "+",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2010-06-30PGFP+ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code BE"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2010-06-30PGFP+ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Payment DATE 20091130"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2010-06-30PGFP+ANNUAL FEE PAID TO NATIONAL OFFICE  [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Year of Fee Payment 11"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2010-06-30"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PGFP"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2010-07-08"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2010-07-05"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "BE"
+              },
+              "ops:L518EP": {
+                "@desc": "Payment DATE",
+                "#text": "20091130"
+              },
+              "ops:L520EP": {
+                "@desc": "Year of Fee Payment",
+                "#text": "11"
+              }
+            }
+          }
+        },
+        {
+          "code": "GBPC",
+          "desc": "GB: EUROPEAN PATENT CEASED THROUGH NON-PAYMENT OF RENEWAL FEE",
+          "text": "GB: EUROPEAN PATENT CEASED THROUGH NON-PAYMENT OF RENEWAL FEE EP    99203729A  2011-07-27GBPC-GB: EUROPEAN PATENT CEASED THROUGH NON-PAYMENT OF RENEWAL FEE Effective DATE 20101108",
+          "raw": {
+            "@code": "GBPC",
+            "@desc": "GB: EUROPEAN PATENT CEASED THROUGH NON-PAYMENT OF RENEWAL FEE",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": {
+              "@line": "00001",
+              "#text": "EP    99203729A  2011-07-27GBPC-GB: EUROPEAN PATENT CEASED THROUGH NON-PAYMENT OF RENEWAL FEE Effective DATE 20101108"
+            },
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2011-07-27"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "GBPC"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2011-07-28"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2011-07-28"
+            },
+            "ops:L500EP": {
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20101108"
+              }
+            }
+          }
+        },
+        {
+          "code": "BERE",
+          "desc": "BE: LAPSED",
+          "text": "BE: LAPSED EP    99203729A  2011-05-31BERE-BE: LAPSED OWNER BEHEERMAATSCHAPPIJ *DE BOER NIJMEGEN B.V. EP    99203729A  2011-05-31BERE-BE: LAPSED Effective DATE 20101130",
+          "raw": {
+            "@code": "BERE",
+            "@desc": "BE: LAPSED",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2011-05-31BERE-BE: LAPSED OWNER BEHEERMAATSCHAPPIJ *DE BOER NIJMEGEN B.V."
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2011-05-31BERE-BE: LAPSED Effective DATE 20101130"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2011-05-31"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "BERE"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "0001-01-01"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2011-08-09"
+            },
+            "ops:L500EP": {
+              "ops:L509EP": {
+                "@desc": "OWNER",
+                "#text": "BEHEERMAATSCHAPPIJ *DE BOER NIJMEGEN B.V."
+              },
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20101130"
+              }
+            }
+          }
+        },
+        {
+          "code": "PG25",
+          "desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2011-08-31PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code BE EP    99203729A  2011-08-31PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES EP    99203729A  2011-08-31PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20101130",
+          "raw": {
+            "@code": "PG25",
+            "@desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2011-08-31PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code BE"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2011-08-31PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2011-08-31PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20101130"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2011-08-31"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PG25"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2011-09-08"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2011-09-05"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "BE"
+              },
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES"
+              },
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20101130"
+              }
+            }
+          }
+        },
+        {
+          "code": "PG25",
+          "desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2011-08-31PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code NL EP    99203729A  2011-08-31PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES EP    99203729A  2011-08-31PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20110601",
+          "raw": {
+            "@code": "PG25",
+            "@desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2011-08-31PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code NL"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2011-08-31PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2011-08-31PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20110601"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2011-08-31"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PG25"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2011-09-08"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2011-09-05"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "NL"
+              },
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES"
+              },
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20110601"
+              }
+            }
+          }
+        },
+        {
+          "code": "PG25",
+          "desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2011-11-30PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code GB EP    99203729A  2011-11-30PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES EP    99203729A  2011-11-30PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20101108",
+          "raw": {
+            "@code": "PG25",
+            "@desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2011-11-30PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code GB"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2011-11-30PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2011-11-30PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20101108"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2011-11-30"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PG25"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2011-12-08"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2011-12-05"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "GB"
+              },
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES"
+              },
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20101108"
+              }
+            }
+          }
+        },
+        {
+          "code": "REG ",
+          "desc": "REFERENCE TO A NATIONAL CODE",
+          "text": "REFERENCE TO A NATIONAL CODE EP    99203729A  2011-06-15REG  REFERENCE TO A NATIONAL CODE Ref Country Code NL EP    99203729A  2011-06-15REG  REFERENCE TO A NATIONAL CODE Ref Legal Event Code V1 EP    99203729A  2011-06-15REG  REFERENCE TO A NATIONAL CODE Effective DATE 20110601",
+          "raw": {
+            "@code": "REG ",
+            "@desc": "REFERENCE TO A NATIONAL CODE",
+            "@infl": " ",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2011-06-15REG  REFERENCE TO A NATIONAL CODE Ref Country Code NL"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2011-06-15REG  REFERENCE TO A NATIONAL CODE Ref Legal Event Code V1"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2011-06-15REG  REFERENCE TO A NATIONAL CODE Effective DATE 20110601"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2011-06-15"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "REG"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2012-05-17"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2012-05-14"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "NL"
+              },
+              "ops:L502EP": {
+                "@desc": "Ref Legal Event Code",
+                "@descData": "LAPSED BECAUSE OF NON-PAYMENT OF THE ANNUAL FEE",
+                "@infl": "-",
+                "#text": "V1"
+              },
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20110601"
+              }
+            }
+          }
+        },
+        {
+          "code": "PG25",
+          "desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code IT EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT;WARNING: LAPSES OF ITALIAN PATENTS WITH EFFECTIVE DATE BEFORE 2007 MAY HAVE OCCURRED AT ANY TIME BEFORE 2007. THE CORRECT EFFECTIVE DATE MAY BE DIFFERENT FROM THE ONE RECORDED. EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030212",
+          "raw": {
+            "@code": "PG25",
+            "@desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code IT"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT;WARNING: LAPSES OF ITALIAN PATENTS WITH EFFECTIVE DATE BEFORE 2007 MAY HAVE OCCURRED AT ANY TIME BEFORE 2007. THE CORRECT EFFECTIVE DATE MAY BE DIFFERENT FROM THE ONE RECORDED."
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030212"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-02-12"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PG25"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2008-01-17"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2008-01-17"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "IT"
+              },
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT;WARNING: LAPSES OF ITALIAN PATENTS WITH EFFECTIVE DATE BEFORE 2007 MAY HAVE OCCURRED AT ANY TIME BEFORE 2007. THE CORRECT EFFECTIVE DATE MAY BE DIFFERENT FROM THE ONE RECORDED."
+              },
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20030212"
+              }
+            }
+          }
+        },
+        {
+          "code": "PG25",
+          "desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+          "text": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code AT EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030212",
+          "raw": {
+            "@code": "PG25",
+            "@desc": "LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO]",
+            "@infl": "-",
+            "@dateMigr": "00010101",
+            "ops:pre": [
+              {
+                "@line": "00001",
+                "#text": "EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Ref Country Code AT"
+              },
+              {
+                "@line": "00002",
+                "#text": "EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Free Format Text LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              {
+                "@line": "00003",
+                "#text": "EP    99203729A  2003-02-12PG25-LAPSED IN A CONTRACTING STATE [ANNOUNCED VIA POSTGRANT INFORMATION FROM NATIONAL OFFICE TO EPO] Effective DATE 20030212"
+              }
+            ],
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-02-12"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PG25"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2008-01-17"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "1970-01-01"
+            },
+            "ops:L500EP": {
+              "ops:L501EP": {
+                "@desc": "Ref Country Code",
+                "#text": "AT"
+              },
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT"
+              },
+              "ops:L525EP": {
+                "@desc": "Effective DATE",
+                "#text": "20030212"
+              }
+            }
+          }
+        },
+        {
+          "code": "TPAB",
+          "desc": "INFORMATION RELATED TO OBSERVATIONS BY THIRD PARTIES DELETED",
+          "text": "INFORMATION RELATED TO OBSERVATIONS BY THIRD PARTIES DELETED EP    99203729A  2014-06-07TPAB INFORMATION RELATED TO OBSERVATIONS BY THIRD PARTIES DELETED Free Format Text ORIGINAL CODE: EPIDOSDTIPA",
+          "raw": {
+            "@code": "TPAB",
+            "@desc": "INFORMATION RELATED TO OBSERVATIONS BY THIRD PARTIES DELETED",
+            "@infl": " ",
+            "@dateMigr": "00010101",
+            "ops:pre": {
+              "@line": "00001",
+              "#text": "EP    99203729A  2014-06-07TPAB INFORMATION RELATED TO OBSERVATIONS BY THIRD PARTIES DELETED Free Format Text ORIGINAL CODE: EPIDOSDTIPA"
+            },
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2014-06-07"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "TPAB"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2021-10-02"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2021-09-29"
+            },
+            "ops:L500EP": {
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "ORIGINAL CODE: EPIDOSDTIPA"
+              }
+            }
+          }
+        },
+        {
+          "code": "TPAC",
+          "desc": "OBSERVATIONS FILED BY THIRD PARTIES",
+          "text": "OBSERVATIONS FILED BY THIRD PARTIES EP    99203729A  2011-12-02TPAC OBSERVATIONS FILED BY THIRD PARTIES Free Format Text ORIGINAL CODE: EPIDOSNTIPA",
+          "raw": {
+            "@code": "TPAC",
+            "@desc": "OBSERVATIONS FILED BY THIRD PARTIES",
+            "@infl": " ",
+            "@dateMigr": "00010101",
+            "ops:pre": {
+              "@line": "00001",
+              "#text": "EP    99203729A  2011-12-02TPAC OBSERVATIONS FILED BY THIRD PARTIES Free Format Text ORIGINAL CODE: EPIDOSNTIPA"
+            },
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2011-12-02"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "TPAC"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2021-10-02"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2021-09-29"
+            },
+            "ops:L500EP": {
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "ORIGINAL CODE: EPIDOSNTIPA"
+              }
+            }
+          }
+        },
+        {
+          "code": "GRAA",
+          "desc": "(EXPECTED) GRANT",
+          "text": "(EXPECTED) GRANT EP    99203729A  2002-12-28GRAA+(EXPECTED) GRANT Free Format Text ORIGINAL CODE: 0009210",
+          "raw": {
+            "@code": "GRAA",
+            "@desc": "(EXPECTED) GRANT",
+            "@infl": "+",
+            "@dateMigr": "00010101",
+            "ops:pre": {
+              "@line": "00001",
+              "#text": "EP    99203729A  2002-12-28GRAA+(EXPECTED) GRANT Free Format Text ORIGINAL CODE: 0009210"
+            },
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2002-12-28"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "GRAA"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2021-10-02"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2021-09-29"
+            },
+            "ops:L500EP": {
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "ORIGINAL CODE: 0009210"
+              }
+            }
+          }
+        },
+        {
+          "code": "GRAH",
+          "desc": "DESPATCH OF COMMUNICATION OF INTENTION TO GRANT A PATENT",
+          "text": "DESPATCH OF COMMUNICATION OF INTENTION TO GRANT A PATENT EP    99203729A  2002-09-06GRAH+DESPATCH OF COMMUNICATION OF INTENTION TO GRANT A PATENT Free Format Text ORIGINAL CODE: EPIDOS IGRA",
+          "raw": {
+            "@code": "GRAH",
+            "@desc": "DESPATCH OF COMMUNICATION OF INTENTION TO GRANT A PATENT",
+            "@infl": "+",
+            "@dateMigr": "00010101",
+            "ops:pre": {
+              "@line": "00001",
+              "#text": "EP    99203729A  2002-09-06GRAH+DESPATCH OF COMMUNICATION OF INTENTION TO GRANT A PATENT Free Format Text ORIGINAL CODE: EPIDOS IGRA"
+            },
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2002-09-06"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "GRAH"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2021-10-02"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2021-09-29"
+            },
+            "ops:L500EP": {
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "ORIGINAL CODE: EPIDOS IGRA"
+              }
+            }
+          }
+        },
+        {
+          "code": "GRAG",
+          "desc": "DESPATCH OF COMMUNICATION OF INTENTION TO GRANT",
+          "text": "DESPATCH OF COMMUNICATION OF INTENTION TO GRANT EP    99203729A  2002-08-02GRAG+DESPATCH OF COMMUNICATION OF INTENTION TO GRANT Free Format Text ORIGINAL CODE: EPIDOS AGRA",
+          "raw": {
+            "@code": "GRAG",
+            "@desc": "DESPATCH OF COMMUNICATION OF INTENTION TO GRANT",
+            "@infl": "+",
+            "@dateMigr": "00010101",
+            "ops:pre": {
+              "@line": "00001",
+              "#text": "EP    99203729A  2002-08-02GRAG+DESPATCH OF COMMUNICATION OF INTENTION TO GRANT Free Format Text ORIGINAL CODE: EPIDOS AGRA"
+            },
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2002-08-02"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "GRAG"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2021-10-02"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2021-09-29"
+            },
+            "ops:L500EP": {
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "ORIGINAL CODE: EPIDOS AGRA"
+              }
+            }
+          }
+        },
+        {
+          "code": "GRAH",
+          "desc": "DESPATCH OF COMMUNICATION OF INTENTION TO GRANT A PATENT",
+          "text": "DESPATCH OF COMMUNICATION OF INTENTION TO GRANT A PATENT EP    99203729A  2002-08-02GRAH+DESPATCH OF COMMUNICATION OF INTENTION TO GRANT A PATENT Free Format Text ORIGINAL CODE: EPIDOS IGRA",
+          "raw": {
+            "@code": "GRAH",
+            "@desc": "DESPATCH OF COMMUNICATION OF INTENTION TO GRANT A PATENT",
+            "@infl": "+",
+            "@dateMigr": "00010101",
+            "ops:pre": {
+              "@line": "00001",
+              "#text": "EP    99203729A  2002-08-02GRAH+DESPATCH OF COMMUNICATION OF INTENTION TO GRANT A PATENT Free Format Text ORIGINAL CODE: EPIDOS IGRA"
+            },
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2002-08-02"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "GRAH"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2021-10-02"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2021-09-29"
+            },
+            "ops:L500EP": {
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "ORIGINAL CODE: EPIDOS IGRA"
+              }
+            }
+          }
+        },
+        {
+          "code": "GRAG",
+          "desc": "DESPATCH OF COMMUNICATION OF INTENTION TO GRANT",
+          "text": "DESPATCH OF COMMUNICATION OF INTENTION TO GRANT EP    99203729A  2002-04-15GRAG+DESPATCH OF COMMUNICATION OF INTENTION TO GRANT Free Format Text ORIGINAL CODE: EPIDOS AGRA",
+          "raw": {
+            "@code": "GRAG",
+            "@desc": "DESPATCH OF COMMUNICATION OF INTENTION TO GRANT",
+            "@infl": "+",
+            "@dateMigr": "00010101",
+            "ops:pre": {
+              "@line": "00001",
+              "#text": "EP    99203729A  2002-04-15GRAG+DESPATCH OF COMMUNICATION OF INTENTION TO GRANT Free Format Text ORIGINAL CODE: EPIDOS AGRA"
+            },
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2002-04-15"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "GRAG"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2021-10-02"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2021-09-29"
+            },
+            "ops:L500EP": {
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "ORIGINAL CODE: EPIDOS AGRA"
+              }
+            }
+          }
+        },
+        {
+          "code": "PUAI",
+          "desc": "PUBLIC REFERENCE MADE UNDER ARTICLE 153(3) EPC TO A PUBLISHED INTERNATIONAL APPLICATION THAT HAS ENTERED THE EUROPEAN PHASE",
+          "text": "PUBLIC REFERENCE MADE UNDER ARTICLE 153(3) EPC TO A PUBLISHED INTERNATIONAL APPLICATION THAT HAS ENTERED THE EUROPEAN PHASE EP    99203729A  2000-03-31PUAI PUBLIC REFERENCE MADE UNDER ARTICLE 153(3) EPC TO A PUBLISHED INTERNATIONAL APPLICATION THAT HAS ENTERED THE EUROPEAN PHASE Free Format Text ORIGINAL CODE: 0009012",
+          "raw": {
+            "@code": "PUAI",
+            "@desc": "PUBLIC REFERENCE MADE UNDER ARTICLE 153(3) EPC TO A PUBLISHED INTERNATIONAL APPLICATION THAT HAS ENTERED THE EUROPEAN PHASE",
+            "@infl": " ",
+            "@dateMigr": "00010101",
+            "ops:pre": {
+              "@line": "00001",
+              "#text": "EP    99203729A  2000-03-31PUAI PUBLIC REFERENCE MADE UNDER ARTICLE 153(3) EPC TO A PUBLISHED INTERNATIONAL APPLICATION THAT HAS ENTERED THE EUROPEAN PHASE Free Format Text ORIGINAL CODE: 0009012"
+            },
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2000-03-31"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PUAI"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2021-10-02"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2021-09-29"
+            },
+            "ops:L500EP": {
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "ORIGINAL CODE: 0009012"
+              }
+            }
+          }
+        },
+        {
+          "code": "STAA",
+          "desc": "INFORMATION ON THE STATUS OF AN EP PATENT APPLICATION OR GRANTED EP PATENT",
+          "text": "INFORMATION ON THE STATUS OF AN EP PATENT APPLICATION OR GRANTED EP PATENT EP    99203729A  2003-12-19STAA INFORMATION ON THE STATUS OF AN EP PATENT APPLICATION OR GRANTED EP PATENT Free Format Text STATUS: NO OPPOSITION FILED WITHIN TIME LIMIT",
+          "raw": {
+            "@code": "STAA",
+            "@desc": "INFORMATION ON THE STATUS OF AN EP PATENT APPLICATION OR GRANTED EP PATENT",
+            "@infl": " ",
+            "@dateMigr": "00010101",
+            "ops:pre": {
+              "@line": "00001",
+              "#text": "EP    99203729A  2003-12-19STAA INFORMATION ON THE STATUS OF AN EP PATENT APPLICATION OR GRANTED EP PATENT Free Format Text STATUS: NO OPPOSITION FILED WITHIN TIME LIMIT"
+            },
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-12-19"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "STAA"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2021-10-02"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2021-09-29"
+            },
+            "ops:L500EP": {
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "STATUS: NO OPPOSITION FILED WITHIN TIME LIMIT"
+              }
+            }
+          }
+        },
+        {
+          "code": "PLBE",
+          "desc": "NO OPPOSITION FILED WITHIN TIME LIMIT",
+          "text": "NO OPPOSITION FILED WITHIN TIME LIMIT EP    99203729A  2003-12-19PLBE+NO OPPOSITION FILED WITHIN TIME LIMIT Free Format Text ORIGINAL CODE: 0009261",
+          "raw": {
+            "@code": "PLBE",
+            "@desc": "NO OPPOSITION FILED WITHIN TIME LIMIT",
+            "@infl": "+",
+            "@dateMigr": "00010101",
+            "ops:pre": {
+              "@line": "00001",
+              "#text": "EP    99203729A  2003-12-19PLBE+NO OPPOSITION FILED WITHIN TIME LIMIT Free Format Text ORIGINAL CODE: 0009261"
+            },
+            "ops:L001EP": {
+              "@desc": "Country Code",
+              "#text": "EP"
+            },
+            "ops:L002EP": {
+              "@desc": "Filing / Published Document",
+              "#text": "F"
+            },
+            "ops:L003EP": {
+              "@desc": "Document Number",
+              "#text": "99203729"
+            },
+            "ops:L004EP": {
+              "@desc": "Kind Code",
+              "#text": "A"
+            },
+            "ops:L005EP": {
+              "@desc": "IPR Type",
+              "#text": "PI"
+            },
+            "ops:L007EP": {
+              "@desc": "Gazette DATE",
+              "#text": "2003-12-19"
+            },
+            "ops:L008EP": {
+              "@desc": "Legal Event Code 1",
+              "#text": "PLBE"
+            },
+            "ops:L018EP": {
+              "@desc": "DATE last exchanged",
+              "#text": "2022-02-09"
+            },
+            "ops:L019EP": {
+              "@desc": "DATE first created",
+              "#text": "2022-02-02"
+            },
+            "ops:L500EP": {
+              "ops:L510EP": {
+                "@desc": "Free Format Text",
+                "#text": "ORIGINAL CODE: 0009261"
+              }
+            }
+          }
+        }
+      ],
+      "confidence": "high",
+      "source": "legal"
+    }
+  ]
+}
