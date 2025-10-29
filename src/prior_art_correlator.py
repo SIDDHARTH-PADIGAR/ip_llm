@@ -129,25 +129,37 @@ class PriorArtCorrelator:
         self._save_cache()
         return results
 
-    def query_llm_for_ambiguous(self, citation, events) -> str:
-        """Optional: call LLM to decide mapping when heuristic confidence is low"""
+    def query_llm(self, text: str) -> str:
         api_key = os.getenv("OPENROUTER_API_KEY")
-        if not api_key or not events:
-            return "LLM not available"
-        prompt = f"Does the following prosecution event text indicate that citation {citation.get('raw')} was applied against specific claims?\\n\\nCitation: {citation}\\n\\nEvents:\\n"
-        for ev in events:
-            prompt += f"- Code: {ev.get('code')}, Desc: {ev.get('desc')}, Text: {ev.get('text')[:400]}\\n"
-        # minimal call pattern; adapt to your LLM wrapper
+        if not api_key:
+            return "LLM analysis not available - API key not found"
+        
+        url = "https://openrouter.ai/api/v1/chat/completions"
+        headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "Referer": "http://localhost:8501"  # optional, can remove
+        }
+
+        payload = {
+            "model": "openai/gpt-4o-mini",
+            "messages": [
+                {"role": "system", "content": "You are a patent analysis expert."},
+                {"role": "user", "content": text}
+            ]
+        }
+
         try:
-            resp = requests.post(
-                "https://api.openrouter.ai/api/v1/chat/completions",
-                headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
-                json={
-                    "model": "openai/gpt-3.5-turbo",
-                    "messages":[{"role":"user","content":prompt}]
-                },
-                timeout=30
-            )
-            return resp.json().get("choices",[{}])[0].get("message",{}).get("content","")
-        except Exception as e:
-            return f"LLM error: {e}"
+            session = requests.Session()
+            adapter = requests.adapters.HTTPAdapter(max_retries=3)
+            session.mount('https://', adapter)
+
+            response = session.post(url, headers=headers, json=payload, timeout=(5, 30))
+            response.raise_for_status()
+            return response.json()["choices"][0]["message"]["content"]
+
+        except requests.exceptions.RequestException as e:
+            return f"API request failed: {str(e)}"
+        finally:
+            session.close()

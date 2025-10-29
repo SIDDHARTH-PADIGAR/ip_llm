@@ -127,9 +127,8 @@ def clean_legal_text(text):
     return str(text)
 
 def display_prior_art(data):
-    """Render Prior Art Correlation results using PriorArtCorrelator"""
     try:
-        st.markdown("#### Prior Art Correlation")
+        st.markdown("### Prior Art Analysis")
         correlator = PriorArtCorrelator(data)
         results = correlator.match_to_rejections()
 
@@ -137,38 +136,78 @@ def display_prior_art(data):
             st.info("No citations found in the data.")
             return
 
-        for idx, item in enumerate(results, start=1):
+        # Generate executive summary using OpenRouter
+        summary_prompt = f"""Analyze these patent citations and provide a brief executive summary:
+        Total Citations: {len(results)}
+        Bibliographic Citations: {len([r for r in results if r.get('source') == 'bibliographic'])}
+        Legal Citations: {len([r for r in results if r.get('source') == 'legal'])}
+        High Confidence Matches: {len([r for r in results if r.get('confidence') == 'high'])}
+        
+        Provide a 2-3 sentence summary focusing on the significance of these citations.
+        """
+        
+        summary = correlator.query_llm(summary_prompt)
+        st.markdown("#### Executive Summary")
+        st.info(summary)
+
+        # Statistical Overview
+        st.markdown("#### Statistical Overview")
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric("Total Citations", len(results))
+        with col2:
+            high_conf = len([r for r in results if r.get("confidence") == "high"])
+            st.metric("High Confidence", f"{high_conf}/{len(results)}")
+        with col3:
+            biblio = len([r for r in results if r.get("source") == "bibliographic"])
+            legal = len([r for r in results if r.get("source") == "legal"])
+            st.metric("Sources", f"Biblio: {biblio} | Legal: {legal}")
+
+        # Citation Details with improved formatting
+        st.markdown("#### Citation Analysis")
+        
+        for idx, item in enumerate(results, 1):
             citation = item.get("citation", {})
-            raw = citation.get("raw", "") or item.get("citation", {}).get("raw", "")
-            norm = f"{citation.get('country','')}{citation.get('number','')}{citation.get('kind','')}".strip() or raw
+            norm = f"{citation.get('country','')}{citation.get('number','')}{citation.get('kind','')}"
             confidence = item.get("confidence", "low")
-            source = item.get("source", "unknown")
             matches = item.get("matches", [])
 
-            header = f"{idx}. {norm} — {source.upper()} — Confidence: {confidence.upper()}"
-            with st.expander(header, expanded=False):
-                st.write("**Raw citation:**", raw)
-                st.write("**Normalized:**", citation)
-                st.write("**Matched events:**", len(matches))
+            with st.expander(f"Citation {idx}: {norm} [{confidence.upper()}]"):
+                # Citation Overview
+                st.markdown("**Citation Overview**")
+                cols = st.columns([1, 2])
+                with cols[0]:
+                    st.markdown(f"""
+                    - **Number**: {norm}
+                    - **Source**: {item.get('source', '').title()}
+                    - **Confidence**: {confidence.upper()}
+                    - **Events**: {len(matches)}
+                    """)
+                
+                # Event Timeline
                 if matches:
-                    for m in matches:
-                        # show event code, description and snippet of event text
-                        code = m.get("code") or m.get("raw", {}).get("@code", "")
-                        desc = m.get("desc") or m.get("raw", {}).get("@desc", "")
-                        text = (m.get("text") or "")[:600]
-                        st.markdown(f"- **{code}** — {desc}")
-                        if text:
-                            st.code(text)
-                else:
-                    st.write("No heuristic matches found for this citation.")
-
-                # Offer LLM re-check for ambiguous/low-confidence items
-                if confidence == "low":
-                    if st.button(f"Run LLM check for citation {idx}", key=f"llm_{idx}"):
-                        with st.spinner("Calling LLM for disambiguation..."):
-                            llm_note = correlator.query_llm_for_ambiguous(citation, matches)
-                            st.markdown("**LLM analysis:**")
-                            st.write(llm_note)
+                    st.markdown("---")
+                    st.markdown("**Event Timeline**")
+                    for match in matches:
+                        code = match.get("code", "")
+                        desc = match.get("desc", "")
+                        text = match.get("text", "")
+                        
+                        # Create a clean event display
+                        st.markdown(f"""
+                        <div style='padding: 10px; margin: 5px 0; border-radius: 5px;'>
+                            <p><strong>{code}</strong> - {desc}</p>
+                            <p style='font-size: 0.9em; margin-top: 5px;'>{text[:200]}{'...' if len(text) > 200 else ''}</p>
+                        </div>
+                        """, unsafe_allow_html=True)
+                
+                # Optional AI Analysis for low confidence matches
+                if confidence.lower() == "low":
+                    st.markdown("---")
+                    if st.button("Analyze Citation Context", key=f"llm_{idx}"):
+                        with st.spinner("Analyzing..."):
+                            analysis = correlator.query_llm_for_ambiguous(citation, matches)
+                            st.info(analysis)
 
     except Exception as e:
         st.error(f"Prior art rendering failed: {e}")
