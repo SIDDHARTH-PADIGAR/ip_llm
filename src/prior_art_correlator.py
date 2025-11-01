@@ -3,6 +3,7 @@ import os
 import json
 import requests
 from typing import List, Dict
+from datetime import datetime
 
 class PriorArtCorrelator:
     def __init__(self, patent_data: Dict, cache_path: str = None):
@@ -74,6 +75,8 @@ class PriorArtCorrelator:
             kind = m.group(3) or ""
             return {"country": country, "number": number, "kind": kind, "raw": raw}
         return {"raw": raw}
+    
+    
 
     def match_to_rejections(self) -> List[Dict]:
         """
@@ -128,38 +131,144 @@ class PriorArtCorrelator:
         self.cache[self.cache_key] = results
         self._save_cache()
         return results
+    
+    
 
     def query_llm(self, text: str) -> str:
         api_key = os.getenv("OPENROUTER_API_KEY")
         if not api_key:
             return "LLM analysis not available - API key not found"
         
-        url = "https://openrouter.ai/api/v1/chat/completions"
+        url = "https://openrouter.ai/api/v1/chat/completions"  # Correct URL
         headers = {
             "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json",
-            "Accept": "application/json",
-            "Referer": "http://localhost:8501"  # optional, can remove
+            "HTTP-Referer": "http://localhost:8501"
         }
-
+        
         payload = {
-            "model": "openai/gpt-4o-mini",
+            "model": "openai/gpt-3.5-turbo",
             "messages": [
-                {"role": "system", "content": "You are a patent analysis expert."},
-                {"role": "user", "content": text}
+                {
+                    "role": "system",
+                    "content": "You are a patent analysis expert. Provide clear, concise analysis."
+                },
+                {
+                    "role": "user",
+                    "content": text
+                }
             ]
         }
-
+        
         try:
             session = requests.Session()
             adapter = requests.adapters.HTTPAdapter(max_retries=3)
             session.mount('https://', adapter)
-
+            
             response = session.post(url, headers=headers, json=payload, timeout=(5, 30))
             response.raise_for_status()
             return response.json()["choices"][0]["message"]["content"]
-
-        except requests.exceptions.RequestException as e:
-            return f"API request failed: {str(e)}"
+        except Exception as e:
+            return f"Analysis failed: {str(e)}"
         finally:
             session.close()
+
+
+    def _gather_events_for_viz(self) -> List[Dict]:
+        """Format legal events for visualization"""
+        events = []
+        legal_data = self.data.get("legal", {}).get("ops:world-patent-data", {}).get("ops:patent-family", {})
+        
+        if "ops:family-member" in legal_data:
+            for member in legal_data["ops:family-member"]:
+                if "ops:legal" in member:
+                    for event in member["ops:legal"]:
+                        if isinstance(event, dict):
+                            # Extract date
+                            date_str = None
+                            
+                            # Try to get date from event attributes
+                            if "@date" in event:
+                                date_str = event["@date"]
+                            elif "@effective-date" in event:
+                                date_str = event["@effective-date"]
+                            
+                            # If no date found, try to extract from text
+                            if not date_str:
+                                pre = event.get("ops:pre", {})
+                                if isinstance(pre, dict):
+                                    text = pre.get("#text", "")
+                                    date_match = re.search(r'(\d{4})[-.]?(\d{2})[-.]?(\d{2})', text)
+                                    if date_match:
+                                        date_str = ''.join(date_match.groups())
+
+                            # Format date if found
+                            if date_str:
+                                try:
+                                    # Handle different date formats
+                                    if len(date_str) == 8:  # YYYYMMDD
+                                        date = datetime.strptime(date_str, "%Y%m%d")
+                                    else:  # Try ISO format
+                                        date = datetime.fromisoformat(date_str)
+                                    
+                                    formatted_date = date.strftime("%Y-%m-%d")
+                                    
+                                    events.append({
+                                        "date": formatted_date,
+                                        "code": event.get("@code", ""),
+                                        "desc": event.get("@desc", ""),
+                                        "text": event.get("ops:pre", {}).get("#text", "") if isinstance(event.get("ops:pre"), dict) else "",
+                                        "party": "EPO"
+                                    })
+                                except (ValueError, TypeError):
+                                    continue
+        
+        # Sort events by date
+        return sorted(events, key=lambda x: x["date"])
+
+    def get_claim_versions(self) -> List[Dict]:
+        """Extract and format claim versions for visualization"""
+        versions = []
+        
+        # Try to get original claims
+        try:
+            original_claims = self.data.get("claims", {}).get("ops:world-patent-data", {}) \
+                            .get("exchange-documents", {}).get("exchange-document", [{}])[0] \
+                            .get("claims", {}).get("claim", [])
+            
+            if original_claims:
+                versions.append({
+                    "version": "Original",
+                    "claims": [{"id": str(i+1), "text": c.get("claim-text", "")} 
+                             for i, c in enumerate(original_claims)]
+                })
+        except (KeyError, IndexError):
+            pass
+
+        # Try to get amended claims from legal events
+        legal_data = self.data.get("legal", {}).get("ops:world-patent-data", {}).get("ops:patent-family", {})
+        if "ops:family-member" in legal_data:
+            for member in legal_data["ops:family-member"]:
+                if "ops:legal" in member:
+                    for event in member["ops:legal"]:
+                        if isinstance(event, dict) and "amended" in event.get("@desc", "").lower():
+                            pre = event.get("ops:pre", {})
+                            if isinstance(pre, dict):
+                                text = pre.get("#text", "")
+                                # Extract claims using regex
+                                claims = []
+                                claim_matches = re.finditer(r'Claim\s+(\d+)[:\.]?\s+([^(Claim \d+)]+)', text, re.IGNORECASE)
+                                for m in claim_matches:
+                                    claims.append({
+                                        "id": m.group(1),
+                                        "text": m.group(2).strip()
+                                    })
+                                if claims:
+                                    versions.append({
+                                        "version": f"Amendment {event.get('@date', 'Unknown')}",
+                                        "claims": claims
+                                    })
+
+        return versions
+    
+    
