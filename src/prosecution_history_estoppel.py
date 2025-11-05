@@ -54,21 +54,45 @@ class ProsecutionHistoryEstoppel:
         url = "https://api.openrouter.ai/api/v1/chat/completions"
         headers = {
             "Authorization": f"Bearer {os.getenv('OPENROUTER_API_KEY')}",
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "HTTP-Referer": "http://localhost:8501"
         }
+        
+        system_prompt = """You are a patent law expert specializing in prosecution history estoppel analysis.
+        
+    For the following legal event, provide a structured analysis:
+
+    1. Estoppel Assessment
+    - Identify if prosecution history estoppel applies
+    - Specify the type (amendment-based or argument-based)
+    - Detail which claim elements are affected
+
+    2. Scope Impact
+    - Analyze how the prosecution record limits claim interpretation
+    - Identify surrendered subject matter
+    - Assess the doctrine of equivalents implications
+
+    3. Legal Implications
+    - Evaluate enforceability impact
+    - Flag potential validity issues
+    - Note any strategic considerations
+
+    Be specific in citing language that supports your conclusions. Format in clear sections."""
+
         payload = {
-            "model": "openai/gpt-3.5-turbo",
+            "model": "mistralai/mistral-7b-instruct",
             "messages": [{
                 "role": "system",
-                "content": "You are a patent law expert. Analyze the following legal event text and determine if it implies claim scope narrowing or prosecution history estoppel."
+                "content": system_prompt
             }, {
                 "role": "user",
                 "content": text
-            }]
+            }],
+            "temperature": 0.3
         }
         
         try:
-            response = requests.post(url, headers=headers, json=payload)
+            response = requests.post(url, headers=headers, json=payload, timeout=30)
             response.raise_for_status()
             return response.json()["choices"][0]["message"]["content"]
         except Exception as e:

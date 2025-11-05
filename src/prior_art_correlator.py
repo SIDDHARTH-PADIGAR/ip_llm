@@ -139,7 +139,7 @@ class PriorArtCorrelator:
         if not api_key:
             return "LLM analysis not available - API key not found"
         
-        url = "https://openrouter.ai/api/v1/chat/completions"  # Correct URL
+        url = "https://openrouter.ai/api/v1/chat/completions"   # Correct URL
         headers = {
             "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json",
@@ -147,11 +147,11 @@ class PriorArtCorrelator:
         }
         
         payload = {
-            "model": "openai/gpt-3.5-turbo",
+            "model": "mistralai/mistral-7b-instruct",
             "messages": [
                 {
                     "role": "system",
-                    "content": "You are a patent analysis expert. Provide clear, concise analysis."
+                    "content": "You are a senior IP strategist and patent analyst at a top law firm. Provide detailed, actionable analysis with specific examples and business-focused insights."
                 },
                 {
                     "role": "user",

@@ -18,38 +18,57 @@ def generate_pub_variants(pub: str):
     # remove spaces
     s = re.sub(r"\s+", "", s)
     variants = []
-    # if starts with country letters like EP, US, WO, etc.
-    if re.match(r'^[A-Z]{2}', s):
-        base = s
-    else:
-        # assume EP if no country prefix provided (common case for your UI)
-        base = "EP" + s
-
-    # base itself
-    variants.append(base)
-    # try common kinds
-    for kind in ["A1", "A2", "A", "B1", "B2"]:
-        variants.append(f"{base}{kind}")
-    # try with a space before kind (some users paste with spaces)
-    for kind in ["A1", "A2", "A", "B1", "B2"]:
-        variants.append(f"{base} {kind}")
-    # try removing leading zeros or adding if common length patterns (7 or 8 digits)
-    m = re.match(r'^([A-Z]{2})(\d+)([A-Z0-9]*)$', base)
+    
+    # Extract components using regex
+    m = re.match(r'^(EP)?(\d+)([A-Z]\d*)?$', s)
     if m:
-        prefix, digits, suffix = m.group(1), m.group(2), m.group(3)
-        # try zero-padded 7/8 variants if length is short
-        if len(digits) < 7:
-            variants.append(f"{prefix}{digits.zfill(7)}")
-        # try plain digits only (some endpoints accept numeric)
-        variants.append(digits)
-    # de-dupe while preserving order
-    seen = set()
-    out = []
+        prefix, number, kind = m.groups()
+        prefix = prefix or "EP"  # Default to EP if no prefix
+        
+        # Base number without leading zeros
+        base = f"{prefix}{number}"
+        
+        # Add leading zeros to make 7 digits for older patents (up to ~2.1M)
+        # or 8 digits for newer patents (3M+)
+        if len(number) <= 7:
+            padded = f"{prefix}{number.zfill(7)}"
+        else:
+            padded = f"{prefix}{number.zfill(8)}"
+            
+        # Add variants with and without padding
+        variants.extend([base, padded])
+        
+        # If kind code provided, add variants with it
+        if kind:
+            variants.extend([
+                f"{base}{kind}",
+                f"{padded}{kind}",
+                f"{base}.{kind}",
+                f"{padded}.{kind}"
+            ])
+        else:
+            # Try common kind codes
+            for k in ["A1", "A2", "A", "B1", "B2"]:
+                variants.extend([
+                    f"{base}{k}",
+                    f"{padded}{k}",
+                    f"{base}.{k}",
+                    f"{padded}.{k}"
+                ])
+    
+    # Ensure proper epodoc format for API
+    epodoc_variants = []
     for v in variants:
-        if v not in seen:
-            seen.add(v)
-            out.append(v)
-    return out
+        # Remove dots and spaces
+        v = re.sub(r'[\.\s]', '', v)
+        # Format as epodoc if not already
+        if v.startswith('EP'):
+            epodoc_variants.append(v[2:])  # Remove EP prefix for epodoc format
+        epodoc_variants.append(v)
+    
+    # De-dupe while preserving order
+    seen = set()
+    return [x for x in epodoc_variants if x not in seen and not seen.add(x)]
 
 def format_date(date_str):
     if not date_str:
@@ -458,6 +477,22 @@ def display_family_data(data):
 
     except Exception as e:
         st.error(f"Error displaying family data: {str(e)}")
+        
+        
+def get_patent_details(data):
+    """Extract key patent details from the data structure"""
+    biblio = data.get("bibliographic", {}).get("ops:world-patent-data", {}).get("exchange-documents", {}).get("exchange-document", [{}])[0]
+    
+    return {
+        "patent_number": f"{biblio.get('@country', '')}{biblio.get('@doc-number', '')}{biblio.get('@kind', '')}",
+        "title": biblio.get("invention-title", [{}])[0].get("#text", ""),
+        "assignee": "; ".join([a.get("applicant-name", {}).get("#text", "") for a in biblio.get("bibliographic-data", {}).get("applicants", [])]),
+        "inventors": "; ".join([i.get("inventor-name", {}).get("#text", "") for i in biblio.get("bibliographic-data", {}).get("inventors", [])]),
+        "filing_date": format_date(biblio.get("bibliographic-data", {}).get("application-reference", {}).get("document-id", [{}])[0].get("date")),
+        "publication_date": format_date(biblio.get("@date")),
+        "legal_status": "Active" if not any("CEASED" in e.get("@desc", "").upper() for e in data.get("legal_events", []))
+                        else "Ceased"
+    }
 
 def main():
     st.set_page_config(
@@ -530,11 +565,6 @@ def main():
                 # Informational message (helps debug if different candidate was used)
                 if used_candidate and used_candidate != patent_number:
                     st.info(f"Fetched using variant: {used_candidate}")
-
-        except Exception as e:
-            st.error(f"Error fetching patent data: {str(e)}")
-            st.info("Please check if the patent number is correct and try again.")
-            return
 
         except Exception as e:
             st.error(f"Error fetching patent data: {str(e)}")
@@ -632,62 +662,227 @@ def main():
                 st.error(f"Claims evolution rendering error: {e}")
 
             # Report generation
-            st.subheader("PDF Report Generation")
+            st.subheader("AI-Powered Report Generation")
             report_col1, report_col2 = st.columns([3, 1])
             with report_col1:
-                include_timeline = st.checkbox("Include Timeline", value=True, key="include_timeline")
-                include_claims = st.checkbox("Include Claims Analysis", value=True, key="include_claims")
-                include_prior_art = st.checkbox("Include Prior Art Analysis", value=True, key="include_prior_art")
+                include_timeline = st.checkbox("Include Timeline Analysis", value=True)
+                include_claims = st.checkbox("Include Claims Analysis", value=True)
+                include_prior_art = st.checkbox("Include Prior Art Analysis", value=True)
+            
             with report_col2:
-                if st.button("Generate PDF Report"):
+                if st.button("Generate Report"):
                     try:
-                        with st.spinner("Building report..."):
-                            pac = st.session_state.get("prior_art_correlator")
-                            executive_summary = ""
-                            if pac and hasattr(pac, "query_llm"):
-                                executive_summary = pac.query_llm("Summarize the key aspects of this patent analysis in 2-3 sentences.")
-                            else:
-                                executive_summary = "Executive summary not available (LLM not configured)."
+                        with st.spinner("Analyzing patent data..."):
+                            pac = st.session_state.get("prior_art_correlator") or PriorArtCorrelator(data)
 
+                            # Ensure we have patent details
+                            patent_details = get_patent_details(data)
+
+                            # Simple named-placeholders prompts
+                            prompts = {
+                                "executive_summary": """Patent {patent_number} - Litigation & Strategy Analysis
+
+                            PATENT DETAILS (use only these, do NOT invent or assume any other facts):
+                            Title: {title}
+                            Assignee: {assignee}
+                            Filed: {filing_date}
+                            Published: {publication_date}
+                            Legal Status: {legal_status}
+
+                            Provide a high-value executive summary focused on:
+
+                            1. ENFORCEABILITY STATUS
+                            - Current legal status & term
+                            - Key jurisdictions coverage
+                            - Enforceability strength
+
+                            2. LITIGATION VALUE
+                            - Technology significance
+                            - Market impact potential
+                            - Strength of protection
+
+                            3. MONETIZATION POTENTIAL
+                            - Licensing opportunities
+                            - Portfolio strategic value
+                            - Industry applicability
+
+                            4. KEY RECOMMENDATIONS
+                            - Immediate actions needed
+                            - Risk mitigation strategies
+                            - Strategic opportunities
+
+                            Format as clear sections. Focus on actionable insights.""",
+
+                                "timeline_analysis": """PROSECUTION HISTORY ANALYSIS
+
+                            Events:
+                            {timeline_data}
+
+                            Analyze from a litigation perspective:
+
+                            1. PROSECUTION STRENGTH
+                            - Critical decisions & amendments
+                            - Arguments presented/accepted
+                            - Estoppel implications
+
+                            2. ENFORCEABILITY IMPACT
+                            - Effect on claim scope
+                            - Term adjustments
+                            - Opposition/challenge history
+
+                            3. STRATEGIC IMPLICATIONS
+                            - Litigation readiness
+                            - Validity vulnerabilities
+                            - Enforcement strategy
+
+                            Reference specific dates/events. Focus on litigation value.""",
+
+                                "prior_art_analysis": """PRIOR ART STRATEGIC ANALYSIS
+
+                            Citations:
+                            {citation_data}
+
+                            Provide litigation-focused analysis:
+
+                            1. VALIDITY ASSESSMENT
+                            - Closest prior art identified
+                            - Novelty/obviousness risks
+                            - Distinguishing features
+
+                            2. ENFORCEMENT STRATEGY
+                            - Prior art barriers
+                            - Workaround difficulty
+                            - Defensive positions
+
+                            3. LITIGATION RECOMMENDATIONS
+                            - Pre-suit investigations needed
+                            - Validity challenge risks
+                            - Strategic considerations
+
+                            Use specific citations. Focus on actionable insights."""
+                            }
+                            # Build claim versions (prefer existing variable, else pac or session claims)
+                            claim_versions_local = []
+                            try:
+                                if 'claim_versions' in globals() or 'claim_versions' in locals():
+                                    claim_versions_local = claim_versions or []
+                            except Exception:
+                                claim_versions_local = []
+
+                            if not claim_versions_local and pac and hasattr(pac, "get_claim_versions"):
+                                try:
+                                    claim_versions_local = pac.get_claim_versions() or []
+                                except Exception:
+                                    claim_versions_local = []
+
+                            if not claim_versions_local:
+                                claims_session = st.session_state.get("claims", [])
+                                if claims_session:
+                                    claim_versions_local = [{"version": "Extracted", "claims": [{"id": str(i+1), "text": c.get("text","")} for i,c in enumerate(claims_session)]}]
+
+                            # Prepare analyses with safe fallbacks
+                            analyses = {}
+
+                            # Executive summary (LLM if available, else factual fallback)
+                            try:
+                                exec_prompt = prompts["executive_summary"].format(**patent_details)
+                                if pac and hasattr(pac, "query_llm"):
+                                    analyses["executive_summary"] = pac.query_llm(exec_prompt) or ""
+                                else:
+                                    analyses["executive_summary"] = (
+                                        f"{patent_details.get('title','No title')}. "
+                                        f"Assignee: {patent_details.get('assignee','N/A')}. "
+                                        f"Status: {patent_details.get('legal_status','N/A')}."
+                                    )
+                            except Exception as e:
+                                analyses["executive_summary"] = f"Executive summary generation failed: {e}"
+
+                            # Timeline analysis
+                            try:
+                                if include_timeline and events_for_vis:
+                                    timeline_data = "\n".join([f"- {e['date']}: {e['code']} — {e['desc']} ({e.get('text','')[:200]})" for e in events_for_vis])
+                                    if pac and hasattr(pac, "query_llm"):
+                                        analyses["timeline_analysis"] = pac.query_llm(prompts["timeline_analysis"].format(timeline_data=timeline_data)) or ""
+                                    else:
+                                        analyses["timeline_analysis"] = "Timeline available; LLM not configured. See Event Timeline section."
+                                else:
+                                    analyses["timeline_analysis"] = "No timeline events available."
+                            except Exception as e:
+                                analyses["timeline_analysis"] = f"Timeline analysis failed: {e}"
+
+                            # Prior art analysis
+                            try:
+                                citations = []
+                                # prefer match_to_rejections, fallback to extract_citations or structured_data
+                                if pac and hasattr(pac, "match_to_rejections"):
+                                    try:
+                                        citations = pac.match_to_rejections() or []
+                                    except Exception:
+                                        citations = []
+                                # fallback to other pac method(s)
+                                if not citations and pac and hasattr(pac, "extract_citations"):
+                                    try:
+                                        citations = pac.extract_citations() or []
+                                    except Exception:
+                                        citations = []
+                                # final fallback to structured data stored earlier
+                                if not citations:
+                                    citations = st.session_state.get("structured_data", {}).get("prior_art", []) or []
+
+                                if include_prior_art:
+                                    if citations:
+                                        citation_data = "\n".join([
+                                            f"- {c['citation'].get('country','')}{c['citation'].get('number','')}{c['citation'].get('kind','')} (conf={c.get('confidence')})"
+                                            for c in citations
+                                        ])
+                                        if pac and hasattr(pac, "query_llm"):
+                                            analyses["prior_art_analysis"] = pac.query_llm(prompts["prior_art_analysis"].format(citation_data=citation_data)) or ""
+                                        else:
+                                            analyses["prior_art_analysis"] = f"{len(citations)} citation(s) found; LLM not configured."
+                                    else:
+                                        analyses["prior_art_analysis"] = "No citations found for analysis."
+                                else:
+                                    analyses["prior_art_analysis"] = "Prior art analysis not requested."
+                            except Exception as e:
+                                analyses["prior_art_analysis"] = f"Prior art analysis failed: {e}"
+
+                            # Claims analysis
+                            try:
+                                if include_claims:
+                                    if claim_versions_local:
+                                        claims_data = "\n".join([
+                                            f"Version: {v['version']}\n" + "\n".join([f"Claim {c['id']}: {c['text']}" for c in v['claims']])
+                                            for v in claim_versions_local
+                                        ])
+                                        if pac and hasattr(pac, "query_llm"):
+                                            analyses["claims_analysis"] = pac.query_llm(prompts["claims_analysis"].format(claims_data=claims_data)) or ""
+                                        else:
+                                            analyses["claims_analysis"] = "Claims present; LLM not configured for deep analysis."
+                                    else:
+                                        analyses["claims_analysis"] = "No claim versions available for analysis."
+                                else:
+                                    analyses["claims_analysis"] = "Claims analysis not requested."
+                            except Exception as e:
+                                analyses["claims_analysis"] = f"Claims analysis failed: {e}"
+
+                            # Final context and report generation
                             context = {
                                 "patent_number": patent_number,
                                 "generated_at": datetime.now().isoformat(),
-                                "executive_summary": executive_summary,
-                                "events": [{
-                                    "date": event["date"],
-                                    "code": event["code"],
-                                    "desc": event["desc"],
-                                    "details": event["text"]
-                                } for event in events_for_vis] if events_for_vis else [],
-                                "citations": pac.match_to_rejections() if (include_prior_art and pac and hasattr(pac, "match_to_rejections")) else [],
-                                "claims": claim_versions if include_claims else []
+                                "patent_details": patent_details,
+                                "analyses": analyses,
+                                "events": events_for_vis if include_timeline else [],
+                                "citations": (pac.match_to_rejections() if (include_prior_art and pac and hasattr(pac, "match_to_rejections")) else []),
+                                "claims": claim_versions_local if include_claims else []
                             }
 
                             html = build_html_report(context)
-                            out_pdf = os.path.join(os.getcwd(), f"{patent_number}_report.pdf")
-                            success, fallback = export_pdf_from_html(html, out_pdf)
+                            out_path = os.path.join(os.getcwd(), f"{patent_number}_analysis.html")
+                            with open(out_path, "w", encoding="utf-8") as f:
+                                f.write(html)
+                            with open(out_path, "rb") as f:
+                                st.download_button("Download Analysis Report", f, file_name=f"{patent_number}_analysis.html", mime="text/html")
 
-                            if success and os.path.exists(out_pdf):
-                                with open(out_pdf, "rb") as f:
-                                    st.download_button(
-                                        "Download Report (PDF)",
-                                        f,
-                                        file_name=f"{patent_number}_analysis.pdf",
-                                        mime="application/pdf"
-                                    )
-                            else:
-                                # PDF generation failed: offer HTML fallback file (always created by export_pdf_from_html)
-                                if fallback and os.path.exists(fallback):
-                                    with open(fallback, "rb") as f:
-                                        st.warning("PDF generation not available on this system. Download the HTML report instead.")
-                                        st.download_button(
-                                            "Download Report (HTML)",
-                                            f,
-                                            file_name=os.path.basename(fallback),
-                                            mime="text/html"
-                                        )
-                                else:
-                                    st.error("Failed to generate report (no fallback available).")
                     except Exception as e:
                         st.error(f"Report generation failed: {str(e)}")
         # Offer full JSON download (persisted)
