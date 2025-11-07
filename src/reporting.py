@@ -132,12 +132,12 @@ REPORT_HTML_TEMPLATE = """
         {% endfor %}
     </div>
 
-    {% if analyses.prior_art_analysis %}
+    
     <div class="section">
         <h2>Prior Art Analysis</h2>
-        <div class="analysis">{{ analyses.prior_art_analysis }}</div>
+        <div class="analysis">{{ analyses.prior_art_analysis or "No prior art analysis available." }}</div>
     </div>
-    {% endif %}
+    
 
     {% if analyses.claims_analysis %}
     <div class="section">
@@ -157,6 +157,7 @@ def build_html_report(context: Dict) -> str:
     # sanitize other free-text LLM outputs (keep as plain text)
     analyses["timeline_analysis"] = sanitize_llm_output(analyses.get("timeline_analysis","") or "")
     analyses["prior_art_analysis"] = sanitize_llm_output(analyses.get("prior_art_analysis","") or "")
+    print(f"Debug - Prior Art Analysis: {analyses['prior_art_analysis']}")  # Add this debug line
     analyses["claims_analysis"] = sanitize_llm_output(analyses.get("claims_analysis","") or "")
     context["analyses"] = analyses
     return tpl.render(**context)

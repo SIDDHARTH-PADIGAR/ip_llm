@@ -810,35 +810,23 @@ def main():
                             except Exception as e:
                                 analyses["timeline_analysis"] = f"Timeline analysis failed: {e}"
 
-                            # Prior art analysis
                             try:
-                                citations = []
-                                # prefer match_to_rejections, fallback to extract_citations or structured_data
-                                if pac and hasattr(pac, "match_to_rejections"):
-                                    try:
-                                        citations = pac.match_to_rejections() or []
-                                    except Exception:
-                                        citations = []
-                                # fallback to other pac method(s)
-                                if not citations and pac and hasattr(pac, "extract_citations"):
-                                    try:
-                                        citations = pac.extract_citations() or []
-                                    except Exception:
-                                        citations = []
-                                # final fallback to structured data stored earlier
-                                if not citations:
-                                    citations = st.session_state.get("structured_data", {}).get("prior_art", []) or []
-
                                 if include_prior_art:
-                                    if citations:
+                                    # Use the same logic as display_prior_art
+                                    correlator = PriorArtCorrelator(data)
+                                    results = correlator.match_to_rejections()
+
+                                    if results:
                                         citation_data = "\n".join([
-                                            f"- {c['citation'].get('country','')}{c['citation'].get('number','')}{c['citation'].get('kind','')} (conf={c.get('confidence')})"
-                                            for c in citations
+                                            f"Citation {idx}: {c['citation'].get('country','')}{c['citation'].get('number','')}{c['citation'].get('kind','')}"
+                                            f"\nConfidence: {c.get('confidence', 'low')}"
+                                            f"\nSource: {c.get('source', 'unknown')}"
+                                            for idx, c in enumerate(results, 1)
                                         ])
-                                        if pac and hasattr(pac, "query_llm"):
-                                            analyses["prior_art_analysis"] = pac.query_llm(prompts["prior_art_analysis"].format(citation_data=citation_data)) or ""
-                                        else:
-                                            analyses["prior_art_analysis"] = f"{len(citations)} citation(s) found; LLM not configured."
+                                        
+                                        analyses["prior_art_analysis"] = pac.query_llm(prompts["prior_art_analysis"].format(
+                                            citation_data=citation_data
+                                        )) if pac and hasattr(pac, "query_llm") else f"{len(results)} citations found"
                                     else:
                                         analyses["prior_art_analysis"] = "No citations found for analysis."
                                 else:
@@ -875,6 +863,8 @@ def main():
                                 "citations": (pac.match_to_rejections() if (include_prior_art and pac and hasattr(pac, "match_to_rejections")) else []),
                                 "claims": claim_versions_local if include_claims else []
                             }
+                            
+                            
 
                             html = build_html_report(context)
                             out_path = os.path.join(os.getcwd(), f"{patent_number}_analysis.html")
