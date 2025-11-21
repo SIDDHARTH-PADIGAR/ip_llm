@@ -1,4 +1,4 @@
-
+<div style='background-color: #fff3cd; border: 2px solid #ffc107; padding: 15px; border-radius: 5px; margin-bottom: 20px;'><strong style='color: #856404;'>⚠️ Quality Issues:</strong><br>• Coverage header appears 0 times (should be exactly 1).</div>
 <!doctype html>
 <html>
 <head>
@@ -7,7 +7,6 @@
         body { 
             font-family: 'Segoe UI', Arial, sans-serif;
             line-height: 1.6;
-            margin: 40px;
             color: #2d2d2d;
             max-width: 1200px;
             margin: 0 auto;
@@ -21,6 +20,14 @@
         .meta {
             color: #4a5568;
             font-size: 0.9em;
+        }
+        .coverage-banner {
+            background-color: #f0f0f0;
+            border-left: 4px solid #0066cc;
+            padding: 10px;
+            margin: 15px 0;
+            font-size: 0.95em;
+            font-weight: bold;
         }
         .section {
             margin: 2em 0;
@@ -36,10 +43,28 @@
             padding-bottom: 0.5em;
             margin-bottom: 1em;
         }
+        .section h3 {
+            color: #2c5282;
+            margin-top: 1.5em;
+            font-size: 1.1em;
+        }
         .analysis {
             margin: 1em 0;
             line-height: 1.8;
-            white-space: pre-line;
+        }
+        .bullet-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .bullet-list li {
+            margin: 0.5em 0;
+            padding-left: 1.5em;
+            text-indent: -1.5em;
+        }
+        .bullet-list li:before {
+            content: "• ";
+            font-weight: bold;
+            color: #0066cc;
         }
         .event {
             margin: 1em 0;
@@ -56,92 +81,68 @@
             color: #4a5568;
             font-family: monospace;
         }
-        .key-point {
-            background: #ebf8ff;
-            padding: 0.5em 1em;
-            margin: 1em 0;
-            border-radius: 4px;
+        .token-ref {
+            background-color: #e8f4f8;
+            color: #0066cc;
+            padding: 2px 6px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: underline;
+            display: inline-block;
         }
-        .recommendations {
+        .token-ref:hover {
+            background-color: #cce5ff;
+        }
+        .warning-banner {
+            background-color: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            color: #856404;
+        }
+        .top-events {
+            background: #f0f8ff;
+            padding: 1em;
+            border-left: 4px solid #0066cc;
+            border-radius: 4px;
+            margin: 1em 0;
+        }
+        .ranked-citations {
             background: #f0fff4;
             padding: 1em;
-            margin: 1em 0;
+            border-left: 4px solid #28a745;
             border-radius: 4px;
+            margin: 1em 0;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>Patent Analysis Report - EP3000000</h1>
-        <p class="meta">Generated: 2025-11-07T11:18:29.258142</p>
+        <h1>Patent Analysis Report - EP3000000</h1><p style='font-size: 0.95em; font-weight: bold; margin: 15px 0; padding: 10px; background-color: #f0f0f0; border-left: 4px solid #0066cc;'><strong>Coverage:</strong> events=4, citations=1. Report reflects available source data only.</p>
+        <p class="meta">Generated: 2025-11-21T11:13:27.504582</p>
+    </div>
+
+    <div class="coverage-banner">
+        Coverage: events=4, claims=0, citations=1, designations=0. Missing items are omitted.
     </div>
 
     <div class="section">
         <h2>Executive Summary</h2>
-        <div class="analysis"><p>Based on the provided patent details (EP3000000A1), here's a structured analysis:</p>
-<hr />
-<h3><strong>Executive Summary: Patent EP3000000A1</strong></h3>
-<h4><strong>1. Enforceability Status</strong></h4>
-<ul>
-<li><strong>Current Legal Status &amp; Term</strong>: The patent is marked as "Active," indicating it is in force and enforceable. However, the absence of filing and publication dates raises questions about its term validity. Typically, European patents (EP) have a 20-year term from the filing date, but without this data, the exact expiration date is unclear.</li>
-<li><strong>Action</strong>: Verify the filing date with the European Patent Office (EPO) to confirm the remaining term.</li>
-<li><strong>Key Jurisdictions Coverage</strong>: As an EP patent, it may have been validated in multiple European countries (e.g., Germany, France, UK). However, without validation details, the enforceability is limited to the EPO's jurisdiction.</li>
-<li><strong>Action</strong>: Conduct a validation status check to identify granted countries.</li>
-<li><strong>Enforceability Strength</strong>: The lack of litigation history or oppositions suggests it may not have been heavily contested, but this could also indicate limited market impact.</li>
-<li><strong>Action</strong>: Review EPO opposition records to assess prior challenges.</li>
-</ul>
-<h4><strong>2. Litigation Value</strong></h4>
-<ul>
-<li><strong>Technology Significance</strong>: Without the patent's title or claims, it's impossible to assess the technology's novelty or market relevance. However, the high patent number (EP3000000A1) suggests it was filed in a recent cycle, potentially covering cutting-edge innovations.</li>
-<li><strong>Action</strong>: Obtain the full patent text to evaluate technical breadth and competitive positioning.</li>
-<li><strong>Market Impact Potential</strong>: If the patent covers a high-value technology (e.g., AI, biotech, or semiconductor processes), it could have significant licensing or litigation value. Conversely, if it’s narrow in scope, its impact may be limited.</li>
-<li><strong>Action</strong>: Conduct a freedom-to-operate (FTO) analysis to identify potential infringers.</li>
-<li><strong>Strength of Protection</strong>: The absence of litigation suggests either strong claims (no challenges) or weak claims (no enforcement). A claims analysis is critical.</li>
-<li><strong>Action</strong>: Perform a claim charting exercise against competitors' products.</li>
-</ul>
-<h4><strong>3. Monetization Potential</strong></h4>
-<ul>
-<li><strong>Licensing Opportunities</strong>: If the patent covers a widely adopted technology (e.g., 5G, IoT, or green energy), it could attract licensing deals. However, without knowing the field, this is speculative.</li>
-<li><strong>Action</strong>: Identify industry players who may infringe and assess their willingness to license.</li>
-<li><strong>Portfolio Strategic Value</strong>: A single patent may not be valuable alone, but if part of a larger portfolio, it could strengthen cross-licensing negotiations.</li>
-<li><strong>Action</strong>: Evaluate synergies with other patents in the portfolio.</li>
-<li><strong>Industry Applicability</strong>: The patent’s value depends on its relevance to high-growth sectors. For example, patents in AI or renewable energy are more lucrative than niche applications.</li>
-<li><strong>Action</strong>: Map the patent to industry trends and emerging markets.</li>
-</ul>
-<h4><strong>4. Key Recommendations</strong></h4>
-<ul>
-<li><strong>Immediate Actions Needed</strong>:</li>
-<li><strong>Obtain Full Patent Details</strong>: Retrieve the complete patent text, including claims and filing date, from the EPO.</li>
-<li><strong>Conduct a Validation Check</strong>: Determine in which countries the patent is enforced.</li>
-<li><strong>Perform a Claims Analysis</strong>: Assess the patent’s technical and legal strength.</li>
-<li><strong>Risk Mitigation Strategies</strong>:</li>
-<li>If the patent is weak or nearing expiration, consider abandoning it to avoid maintenance fees.</li>
-<li>If enforcement is viable, monitor potential infringers and prepare for litigation.</li>
-<li><strong>Strategic Opportunities</strong>:</li>
-<li><strong>Licensing</strong>: Approach companies in the relevant industry for licensing discussions.</li>
-<li><strong>Acquisition</strong>: If part of a larger portfolio, consider selling or bundling it for higher value.</li>
-<li><strong>Defensive Use</strong>: Use the patent to block competitors or strengthen negotiations in M&amp;A deals.</li>
-</ul>
-<hr />
-<h3><strong>Next Steps</strong></h3>
-<ol>
-<li><strong>Gather Full Patent Data</strong>: Confirm filing, publication, and claims details.</li>
-<li><strong>Assess Market Fit</strong>: Determine if the technology aligns with high-value industries.</li>
-<li><strong>Develop a Monetization Plan</strong>: Decide between licensing, enforcement, or portfolio optimization.</li>
-</ol>
-<p>Would you like a deeper dive into any of these areas?</p></div>
+        <div class="analysis">Patent rights lapsed on 2018-06-12 due to non-payment; restoration procedures may be available within statutory deadlines—assess commercial viability immediately. <span class='token-ref' data-token='EVT#4' data-path='/ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[44]' title='Click to view source: /ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[44]'>[EVT#4]</span><br>No post-grant opposition was filed; eliminates near-term invalidation risk and strengthens claim validity for enforcement and licensing. <span class='token-ref' data-token='EVT#2' data-path='/ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[4]' title='Click to view source: /ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[4]'>[EVT#2]</span><br>Reference EP14735465A presents obviousness concerns; commission detailed claim mapping and prepare technical response to defend independent claims. <span class='token-ref' data-token='CIT#1' data-path='/citations[0]' title='Click to view source: /citations[0]'>[CIT#1]</span><br>Limited family scope; evaluate national extension strategy in high-value markets and assess filing gaps. <span class='token-ref' data-token='EVT#1' data-path='/ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[0]' title='Click to view source: /ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[0]'>[EVT#1]</span><br>Reference EP14735465A may enable design-around opportunities; assess freedom-to-operate and evaluate licensing vs. engineering strategy. <span class='token-ref' data-token='CIT#1' data-path='/citations[0]' title='Click to view source: /citations[0]'>[CIT#1]</span></div>
     </div>
 
     <div class="section">
         <h2>Timeline Analysis</h2>
-        <div class="analysis"></div>
+        <div class="analysis">2018-02-20: 26N — no opposition filed; claim scope unlikely to be challenged in post-grant proceedings, reducing invalidation exposure. <span class='token-ref' data-token='EVT#3' data-path='/ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[35]' title='Click to view source: /ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[35]'>[EVT#3]</span><br>2016-12-09: INTG — intention to grant announced; independent claims are allowable, strengthening litigation position and enabling licensing conversations. <span class='token-ref' data-token='EVT#2' data-path='/ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[4]' title='Click to view source: /ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[4]'>[EVT#2]</span><br>2018-06-12: GBPC — patent ceased in GB due to non-payment; patent ceased in GB due to non-payment; enforcement rights suspended unless restoration is filed; assess statutory deadlines and commercial justification. <span class='token-ref' data-token='EVT#4' data-path='/ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[44]' title='Click to view source: /ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[44]'>[EVT#4]</span><br><br><strong>Top 3 pivotal events:</strong><br>2018-02-20 – 26N – no opposition filed – <span class='token-ref' data-token='EVT#1' data-path='/ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[0]' title='Click to view source: /ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[0]'>[EVT#1]</span><br>2016-12-09 – INTG – intention to grant announced – <span class='token-ref' data-token='EVT#2' data-path='/ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[4]' title='Click to view source: /ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[4]'>[EVT#2]</span><br>2018-06-12 – GBPC – patent ceased in GB due to non-payment; patent ceased in GB due to non-payment – <span class='token-ref' data-token='EVT#4' data-path='/ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[44]' title='Click to view source: /ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[44]'>[EVT#4]</span></div>
         
         <h3>Key Prosecution Events</h3>
         
         <div class="event">
             <span class="event-date">2015-12-22</span>
             <br/>
-            <span class="event-code">17P</span>: REQUEST FOR EXAMINATION FILED
+            <span class="event-code">17P </span>: REQUEST FOR EXAMINATION FILED
         </div>
         
         <div class="event">
@@ -153,7 +154,7 @@
         <div class="event">
             <span class="event-date">2018-02-20</span>
             <br/>
-            <span class="event-code">26N</span>: NO OPPOSITION FILED
+            <span class="event-code">26N </span>: NO OPPOSITION FILED
         </div>
         
         <div class="event">
@@ -164,18 +165,80 @@
         
     </div>
 
-    
     <div class="section">
         <h2>Prior Art Analysis</h2>
-        <div class="analysis">No prior art analysis available.</div>
+        <div class="analysis">Reference EP14735465A may support obviousness rejection if combined with secondary art; prepare expert technical declaration distinguishing inventive steps and non-obvious combinations. <span class='token-ref' data-token='CIT#1' data-path='/citations[0]' title='Click to view source: /citations[0]'>[CIT#1]</span><br><br><strong>Ranked Top 5 citations:</strong><br>1. EP14735465A – obviousness – <span class='token-ref' data-token='CIT#1' data-path='/citations[0]' title='Click to view source: /citations[0]'>[CIT#1]</span></div>
     </div>
-    
 
-    
     <div class="section">
-        <h2>Claims Analysis</h2>
-        <div class="analysis">No claim versions available for analysis.</div>
+        <h2>Evidence-Linked Recommendations</h2>
+        <div class="analysis">Confirm restoration procedures and statutory deadlines for lapsed event on 2018-06-12; file reinstatement petition if patent remains commercially valuable. <span class='token-ref' data-token='EVT#4' data-path='/ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[44]' title='Click to view source: /ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[44]'>[EVT#4]</span><br>Commission targeted invalidity analysis focused on EP14735465A; prepare detailed claim charts and expert technical declaration for defense counsel. <span class='token-ref' data-token='CIT#1' data-path='/citations[0]' title='Click to view source: /citations[0]'>[CIT#1]</span><br>Intention to grant achieved; finalize commercialization partners and licensing targets; identify high-value enforcement opportunities in designated states. <span class='token-ref' data-token='EVT#1' data-path='/ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[0]' title='Click to view source: /ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[0]'>[EVT#1]</span></div>
     </div>
-    
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tokens = document.querySelectorAll('.token-ref');
+        tokens.forEach(token => {
+            token.addEventListener('click', function(e) {
+                e.preventDefault();
+                const path = this.getAttribute('data-path');
+                const tokenName = this.getAttribute('data-token');
+                // Emit custom event that parent app can listen to
+                const event = new CustomEvent('token-clicked', {
+                    detail: { token: tokenName, path: path }
+                });
+                window.dispatchEvent(event);
+                // Log for debugging
+                console.log('Token clicked:', tokenName, 'Path:', path);
+            });
+        });
+    });
+    </script>
+    <script type='application/json' id='token-index'>
+{
+  "EVT#1": {
+    "path": "/ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[0]",
+    "date": "2015-12-22",
+    "code": "17P ",
+    "effects": [
+      "unknown"
+    ],
+    "type": "event"
+  },
+  "EVT#2": {
+    "path": "/ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[4]",
+    "date": "2016-12-09",
+    "code": "INTG",
+    "effects": [
+      "grant_intended"
+    ],
+    "type": "event"
+  },
+  "EVT#3": {
+    "path": "/ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[35]",
+    "date": "2018-02-20",
+    "code": "26N ",
+    "effects": [
+      "unknown"
+    ],
+    "type": "event"
+  },
+  "EVT#4": {
+    "path": "/ops:world-patent-data/ops:patent-family/ops:family-member[0]/ops:legal[44]",
+    "date": "2018-06-12",
+    "code": "GBPC",
+    "effects": [
+      "lapse_national"
+    ],
+    "type": "event"
+  },
+  "CIT#1": {
+    "path": "/citations[0]",
+    "id": "EP14735465A",
+    "kind": "legal",
+    "type": "citation"
+  }
+}
+</script>
 </body>
 </html>
