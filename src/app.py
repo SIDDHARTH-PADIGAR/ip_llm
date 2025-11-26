@@ -278,7 +278,7 @@ def sanitize_ep_language(text: str, jurisdiction: str = "EP") -> str:
     return text
 
 def render_top_pivotal_events(events: list) -> str:
-    """Render top 3 events with tokens [EVT#k] and mapped effect descriptions."""
+    """Render top 3 events with tokens [EVT#k] and mapped effect descriptions (shown earliest->latest)."""
     if not events:
         return ""
     
@@ -299,13 +299,15 @@ def render_top_pivotal_events(events: list) -> str:
     }
     
     def score(e):
-        effects = e.get("effects", []) or ["unknown"]
+        effects = e.get("effects", []) or []
         s = max((priority.get(x, 0) for x in effects), default=0)
         date = e.get("date") or ""
         return (s, date)
     
-    # Sort by priority, then date descending
-    top = sorted(normalized, key=lambda e: (score(e)[0], e.get("date", "")), reverse=True)[:3]
+    # Choose top by priority (tie-breaker: most recent date), then present them chronologically
+    top_by_priority = sorted(normalized, key=lambda e: (score(e)[0], e.get("date", "")), reverse=True)[:3]
+    # Sort chosen top events by date ascending for display (earliest -> latest)
+    top = sorted(top_by_priority, key=lambda e: e.get("date") or "")
     
     if not top:
         return ""
@@ -314,17 +316,17 @@ def render_top_pivotal_events(events: list) -> str:
     for idx, e in enumerate(top, 1):
         date = e.get("date", "YYYY-MM-DD")
         code = e.get("code", "?")
-        effects = e.get("effects", ["unknown"])
+        effects = e.get("effects", [])
         # Map effects to readable description
         effect_descs = []
         for eff in effects:
-            if eff in EVENT_CODE_MAPPING.get(code, {}).get("effects", []):
-                # Use the description from mapping
-                mapped_desc = EVENT_CODE_MAPPING.get(code, {}).get("desc", eff)
+            mapped_desc = EVENT_CODE_MAPPING.get(code, {}).get("desc") if code in EVENT_CODE_MAPPING else None
+            if mapped_desc:
                 effect_descs.append(mapped_desc)
             else:
                 effect_descs.append(eff.replace("_", " "))
         effect_str = "; ".join(effect_descs) if effect_descs else "event recorded"
+        # find stable token index in original events ordering (match on date+code)
         token_idx = next((i+1 for i, ev in enumerate(events) if ev.get("code") == code and ev.get("date") == date), idx)
         token = f"EVT#{token_idx}"
         lines.append(f"{date} – {code} – {effect_str} – [{token}]")
@@ -332,46 +334,9 @@ def render_top_pivotal_events(events: list) -> str:
     return "\n".join(lines)
 
 def format_date(date_str):
-    if not date_str:
-        return "N/A"
-    if isinstance(date_str, datetime):
-        year = date_str.year
-        now_year = datetime.now().year
-        if year < 1900 or year > now_year + 1:
-            return "N/A"
-        return date_str.strftime("%d-%m-%Y")
-    s = str(date_str).strip()
-    now_year = datetime.now().year
-    m = re.search(r'(\d{4})(\d{2})(\d{2})', s)
-    if m:
-        y = int(m.group(1))
-        if 1900 <= y <= now_year + 1:
-            try:
-                return datetime.strptime(m.group(0), "%Y%m%d").strftime("%d-%m-%Y")
-            except Exception:
-                pass
-    m = re.search(r'(\d{4})[\/\-\.\s](\d{2})[\/\-\.\s](\d{2})', s)
-    if m:
-        y = int(m.group(1))
-        if 1900 <= y <= now_year + 1:
-            try:
-                return datetime.strptime(f"{m.group(1)}{m.group(2)}{m.group(3)}", "%Y%m%d").strftime("%d-%m-%Y")
-            except Exception:
-                pass
-    m = re.search(r'(\d{2})[\/\-\.\s](\d{2})[\/\-\.\s](\d{4})', s)
-    if m:
-        y = int(m.group(3))
-        if 1900 <= y <= now_year + 1:
-            try:
-                return datetime.strptime(f"{m.group(3)}{m.group(2)}{m.group(1)}", "%Y%m%d").strftime("%d-%m-%Y")
-            except Exception:
-                pass
-    m = re.search(r'(\d{4})', s)
-    if m:
-        y = int(m.group(1))
-        if 1900 <= y <= now_year + 1:
-            return f"01-01-{y}"
-    return "N/A"
+    # Return ISO YYYY-MM-DD or "N/A"
+    iso = normalize_date_to_iso(date_str)
+    return iso if iso else "N/A"
 
 def extract_structured_data(data):
     """Extract structured data for LLM and visualization."""
@@ -1047,6 +1012,13 @@ def main():
                             extract["coverage"] = coverage
                             st.session_state["extract"] = extract
 
+                            # Ensure all dates in extract are ISO formatted
+                            for event in extract.get("events", []):
+                                if event.get("date") and not re.match(r'^\d{4}-\d{2}-\d{2}$', event.get("date")):
+                                    iso = normalize_date_to_iso(event.get("date"))
+                                    if iso:
+                                        event["date"] = iso
+
                             # Build token_index
                             token_index = build_token_index(extract)
                             st.session_state["token_index"] = token_index
@@ -1465,19 +1437,85 @@ def main():
                                 # Build section text and render
                                 final_section_text = "\n".join(bullets)
                                 final_section_text = sanitize_ep_language(final_section_text, jurisdiction="EP")
-                                final_section_text = remove_placeholders_and_normalize(final_section_text)  # NEW: Final pass
+                                final_section_text = remove_placeholders_and_normalize(final_section_text)  # normalize dates & strip placeholders
+
+                                # Split into lines, enforce token rules, dedupe, and drop any sentence whose token cannot be linked
+                                lines = [ln.strip() for ln in final_section_text.split("\n") if ln.strip()]
+                                clean_lines = []
+                                seen = set()
+                                for ln in lines:
+                                    # skip any leftover placeholders or markers
+                                    if "(Omitted" in ln or "[MISSING]" in ln or "[INVALID_" in ln:
+                                        continue
+                                    # require exactly one evidence token at end of sentence
+                                    toks = re.findall(r'\[(EVT#\d+|CIT#\d+|CLM#\d+|DSG#\d+)\]', ln)
+                                    if not toks:
+                                        continue
+                                    # if more than one token, drop line (must be exactly one token)
+                                    if len(toks) != 1:
+                                        continue
+                                    tok = toks[0]
+                                    # token must exist in token_index
+                                    if tok not in token_index:
+                                        continue
+                                    # dedupe exact lines (preserve first occurrence)
+                                    if ln in seen:
+                                        continue
+                                    seen.add(ln)
+                                    clean_lines.append(ln)
+
+                                # Do not artificially pad; allow shorter sections
+                                final_section_text = "\n".join(clean_lines)
+
+                                # NEW: Deduplication pass — remove repeated phrases within each line
+                                def deduplicate_line(line: str) -> str:
+                                    """Remove repeated consecutive words/phrases in a single line."""
+                                    words = line.split()
+                                    deduped = []
+                                    prev_word = None
+                                    for word in words:
+                                        if word != prev_word:
+                                            deduped.append(word)
+                                            prev_word = word
+                                    return " ".join(deduped)
+
+                                # Apply deduplication to each line
+                                deduped_lines = [deduplicate_line(ln) for ln in final_section_text.split("\n")]
+                                final_section_text = "\n".join(deduped_lines)
+
+                                # Render to HTML
                                 section_html = render_to_html(final_section_text)
 
-                                # Always append deterministic Top/Ranked blocks (tokenized) so they are present
+                                # Append deterministic Top/Ranked blocks (tokenized) only if present and valid
                                 if key == "timeline_analysis" and extract.get("events"):
                                     top3 = render_top_pivotal_events(extract.get("events", []))
                                     if top3 and top3.strip():
-                                        section_html += "<br><br><strong>Top 3 pivotal events:</strong><br>" + render_to_html(top3)
+                                        # ensure tokens in top3 are valid
+                                        valid_top_lines = []
+                                        for line in top3.split("\n"):
+                                            mt = re.search(r'\[(EVT#\d+)\]', line)
+                                            if mt and mt.group(1) in token_index:
+                                                valid_top_lines.append(line)
+                                        if valid_top_lines:
+                                            section_html += "<br><br><strong>Top 3 pivotal events:</strong><br>" + render_to_html("\n".join(valid_top_lines))
 
                                 if key == "prior_art_analysis" and extract.get("citations"):
                                     ranked = render_ranked_citations(extract.get("citations", []))
                                     if ranked and ranked.strip():
-                                        section_html += "<br><br><strong>Ranked Top 5 citations:</strong><br>" + render_to_html(ranked)
+                                        # choose header: "Ranked Top 5 citations" if 5+ exist, else "Ranked Citations"
+                                        cit_count = len(extract.get("citations", []))
+                                        if cit_count >= 5:
+                                            header = "Ranked Top 5 citations"
+                                        else:
+                                            header = "Ranked Citations"
+                                        # ensure only lines with valid tokens survive
+                                        valid_ranked_lines = []
+                                        for line in ranked.split("\n"):
+                                            mc = re.search(r'\[(CIT#\d+)\]', line)
+                                            if mc and mc.group(1) in token_index:
+                                                valid_ranked_lines.append(line)
+                                        if valid_ranked_lines:
+                                            section_html += f"<br><br><strong>{header}:</strong><br>" + render_to_html("\n".join(valid_ranked_lines))
 
                                 analyses[title] = section_html
 
@@ -1501,8 +1539,7 @@ def main():
                                 f"<p style='font-size: 0.95em; font-weight: bold; margin: 15px 0; padding: 10px; "
                                 f"background-color: #f0f0f0; border-left: 4px solid #0066cc;'>"
                                 f"<strong>Coverage:</strong> events={coverage.get('events_present',0)}, "
-                                f"citations={coverage.get('citations_present',0)}. "
-                                f"Report reflects available source data only."
+                                f"citations={coverage.get('citations_present',0)}."
                                 f"</p>"
                             )
 
@@ -1511,9 +1548,13 @@ def main():
                             h1_match = _re.search(r'(</h1>)', html)
                             if h1_match:
                                 html = html[:h1_match.end()] + coverage_line + html[h1_match.end():]
-                            else:
-                                # Fallback: insert at start
-                                html = coverage_line + html
+
+                            # Ensure no duplicate coverage lines exist (dedup)
+                            html = _re.sub(
+                                r'<p[^>]*><strong>Coverage:</strong>.*?</p>(?:\s*<p[^>]*><strong>Coverage:</strong>.*?</p>)+',
+                                coverage_line,
+                                html
+                            )
 
                             # Ensure no duplicate coverage lines exist
                             html = _re.sub(r'<p[^>]*>Coverage:.*?</p>\s*<p[^>]*>Coverage:.*?</p>', coverage_line, html)
@@ -1523,35 +1564,57 @@ def main():
                             # Final checks — strict validation
                             fails = []
 
-                            # Check 1: No [MISSING] tokens
+                            # Check 1: No [MISSING] tokens anywhere
                             if "[MISSING]" in html:
-                                fails.append("Uncited sentences detected (insufficient token sources).")
+                                fails.append("Uncited sentences detected ([MISSING] markers present).")
 
                             # Check 2: No [INVALID_...] tokens
                             if "[INVALID_" in html:
-                                fails.append("Invalid token references detected.")
+                                fails.append("Invalid token references detected ([INVALID_ markers present).")
 
-                            # Check 3: No "estoppel" in EP documents
-                            if "estoppel" in html.lower() and "prosecution interpretation" not in html.lower():
-                                fails.append("Wording violation: 'estoppel' used instead of 'prosecution interpretation'.")
+                            # Check 3: No "estoppel" in EP documents (must use "prosecution interpretation")
+                            if "estoppel" in html.lower():
+                                if "prosecution interpretation" not in html.lower():
+                                    fails.append("Wording violation: 'estoppel' used instead of 'prosecution interpretation'.")
 
                             # Check 4: No "(Omitted pending source)" placeholders
                             if "(Omitted pending source)" in html:
-                                fails.append("Placeholder text remains in output (should be removed).")
+                                fails.append("Placeholder text remains in output.")
 
-                            # Check 5: Deterministic blocks present when data available
+                            # Check 5: Coverage header present exactly once
+                            coverage_count = len(re.findall(r'<strong>Coverage:</strong>', html))
+                            if coverage_count == 0:
+                                fails.append("Coverage header missing (should appear exactly once below title).")
+                            elif coverage_count > 1:
+                                fails.append(f"Coverage header appears {coverage_count} times (should be exactly 1).")
+
+                            # Check 6: If events present, Top 3 block must exist
                             if coverage["events_present"] > 0:
                                 if "Top 3 pivotal events" not in html:
-                                    fails.append("Top 3 pivotal events missing despite events present.")
+                                    fails.append("Top 3 pivotal events block missing despite events present.")
 
+                            # Check 7: If citations present, Ranked block must exist with correct header
                             if coverage["citations_present"] > 0:
-                                if "Ranked Top 5 citations" not in html:
-                                    fails.append("Ranked Top 5 citations missing despite citations present.")
+                                cit_count = coverage["citations_present"]
+                                if cit_count >= 5:
+                                    if "Ranked Top 5 citations" not in html:
+                                        fails.append("'Ranked Top 5 citations' header missing (5+ citations exist).")
+                                else:
+                                    if "Ranked Citations" not in html:
+                                        fails.append(f"'Ranked Citations' header missing ({cit_count} citations exist).")
 
-                            # Check 6: Coverage header exactly once
-                            coverage_count = len(_re.findall(r'<p[^>]*>Coverage:', html))
-                            if coverage_count != 1:
-                                fails.append(f"Coverage header appears {coverage_count} times (should be exactly 1).")
+                            # Check 8: All tokens used must be valid (in token_index)
+                            invalid_tokens = re.findall(r'\[(EVT#\d+|CIT#\d+|CLM#\d+|DSG#\d+)\]', html)
+                            for tok in set(invalid_tokens):
+                                if tok not in token_index:
+                                    fails.append(f"Token {tok} used but not present in token_index.")
+
+                            # Check 9: No duplicate section headers
+                            section_headers = ["Executive Summary", "Timeline Analysis", "Prior Art Analysis", "Evidence-Linked Recommendations"]
+                            for header in section_headers:
+                                header_count = len(re.findall(rf'<h2[^>]*>{re.escape(header)}</h2>', html))
+                                if header_count > 1:
+                                    fails.append(f"Section '{header}' appears {header_count} times (should be 1).")
 
                             if fails:
                                 st.warning("⚠️ **Quality Issues Detected:**\n\n" + "\n".join(["• " + f for f in fails]))
@@ -1563,6 +1626,8 @@ def main():
                                     "</div>"
                                 )
                                 html = warning_html + html
+                            else:
+                                st.success("✅ All quality checks passed. Report is production-ready.")
 
                             # Save and download
                             out_path = os.path.join(os.getcwd(), f"{patent_number}_analysis.html")
