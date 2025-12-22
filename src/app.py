@@ -2,6 +2,8 @@ import os
 import streamlit as st
 import json
 import re
+import requests
+from jose import jwt  
 from api.epo_client import EPOClient
 from datetime import datetime
 from data.parsers.claims_extractor import ClaimsParser
@@ -15,6 +17,22 @@ from ops_fetcher import get_raw
 from ops_extractor import to_extract
 from report_prompt import build_prompts
 from report_guardrails import require_json_tokens, drop_uncited_sentences, prepend_coverage_header, sanitize_ep_language
+
+
+API_BASE = os.getenv("API_BASE", "http://localhost:8000/api")
+SECRET_KEY = os.getenv("SECRET_KEY", "abunchof88apples")  # Match backend
+
+def decode_token(token: str) -> dict:
+    from jose import JWTError
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
+        return payload
+    except JWTError:
+        return {}
+
+def get_user_id_from_token(token: str) -> int:
+    payload = decode_token(token)
+    return int(payload.get("sub", 0)) if payload else 0
 
 
 EVENT_CODE_MAPPING = {
@@ -784,13 +802,66 @@ def get_patent_details(data):
     }
 
 def main():
-    st.set_page_config(
-        page_title="Patent History Analyzer",
-        page_icon="📄",
-        layout="wide"
-    )
-
-    st.title("Patent History Analyzer")
+    st.set_page_config(page_title="Patent History Analyzer", page_icon="📄", layout="wide")
+    
+    # auth check
+    if "token" not in st.session_state:
+        st.session_state["token"] = None
+    if "user" not in st.session_state:
+        st.session_state["user"] = None
+        
+    if not st.session_state.get("token"):
+        st.title("Please Log In")
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.header("Sign Up")
+            su_email = st.text_input("Email (signup)", key="su_email")
+            su_password = st.text_input("Password (signup)", type="password", key="su_password")
+            su_name = st.text_input("Name (optional)", key="su_name")
+            if st.button("Sign Up"):
+                payload = {"email": su_email, "password": su_password, "name": su_name}
+                try:
+                    r = requests.post(f"{API_BASE}/signup", json=payload, timeout=10)
+                    if r.status_code == 201:
+                        st.success("Signup successful, you can now log in.")
+                    else:
+                        st.error(f"Signup failed: {r.status_code} {r.text}")
+                except Exception as e:
+                    st.error(f"Error contacting backend: {e}")
+                    
+        with col2:
+            st.header("Log In")
+            li_email = st.text_input("Email (login)", key="li_email")
+            li_password = st.text_input("Password (login)", type="password", key="li_password")
+            if st.button("Log In"):
+                payload = {"email": li_email, "password": li_password}
+                try:
+                    r = requests.post(f"{API_BASE}/login", json=payload, timeout=10)
+                    if r.status_code == 200:
+                        token = r.json().get("access_token")
+                        st.session_state["token"] = token
+                        use_id = get_user_id_from_token(token)
+                        headers = {"Authorization": f"Bearer {token}"}
+                        me = requests.get(f"{API_BASE}/me", headers=headers, timeout=10)
+                        if me.status_code == 200:
+                            st.session_state["user"] = me.json()
+                            st.session_state["user"]["id"] = use_id
+                            st.success("Login successful!")
+                            st.rerun() # refresh to show main app
+                        else:
+                            st.error(f"login failed: {r.status_code} {r.text}")
+                except Exception as e:
+                    st.error(f"Error contacting backend: {e}")
+        st.stop() # don't show th rest od the app until logged in
+        
+    user = st.session_state.get("user", {})
+    if st.sidebar.button("Logout"):
+        st.session_state["token"] = None
+        st.session_state["user"] = None
+        st.session_state["user_id"] = None
+        st.rerun()
+    
     st.markdown("### Enter Patent Publication Number")
 
     col1, col2 = st.columns([3, 1])
