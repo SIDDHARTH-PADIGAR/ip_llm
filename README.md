@@ -35,6 +35,26 @@ The system follows a decoupled monolithic architecture with distinct ingestion, 
 4. **Analysis Engines (`src/prior_art_correlator.py`, `src/prosecution_history_estoppel.py`)**: The core logic layer. Correlates event sequences, passes structured data along with custom prompts (`report_prompt.py`) to the LLM backend (via OpenRouter), and evaluates confidence scopes (e.g., scoring citations as "examiner", "legal", or "applicant").
 5. **Presentation & Reporting (`src/app.py`, `src/reporting.py`, `src/visualization.py`)**: `app.py` is the main Streamlit application. It provides an intuitive GUI to input publication numbers, visualize interactive timelines of legal events, and dispatch report generation tasks. `reporting.py` coordinates generating final deliverables (HTML/PDF) adhering to strict strict citation guardrails (`report_guardrails.py`).
 
+## Example Output Report
+
+When overIP generates a report, it yields a deterministic HTML document with clickable source tokens linking back to the EPO OPS JSON response. Here is an example of what an exported report looks like for patent `EP3000000`:
+
+> ### Coverage: events=4, citations=1
+>
+> ### Executive Summary
+> - Patent rights lapsed on 2018-06-12 due to non-payment; restoration procedures may be available within statutory deadlines—assess commercial viability immediately. `[EVT#4]`
+> - No post-grant opposition was filed; eliminates near-term invalidation risk and strengthens claim validity for enforcement and licensing. `[EVT#2]`
+> - Reference EP14735465A presents obviousness concerns; commission detailed claim mapping and prepare technical response to defend independent claims. `[CIT#1]`
+> - Limited family scope; evaluate national extension strategy in high-value markets and assess filing gaps. `[EVT#1]`
+>
+> ### Timeline Analysis
+> - **2016-12-09 [INTG]**: Intention to grant announced; independent claims are allowable, strengthening litigation position and enabling licensing conversations. `[EVT#2]`
+> - **2018-02-20 [26N]**: No opposition filed; claim scope unlikely to be challenged in post-grant proceedings, reducing invalidation exposure. `[EVT#3]`
+> - **2018-06-12 [GBPC]**: Patent ceased in GB due to non-payment; enforcement rights suspended unless restoration is filed; assess statutory deadlines and commercial justification. `[EVT#4]`
+>
+> ### Prior Art Analysis
+> Reference EP14735465A may support obviousness rejection if combined with secondary art; prepare expert technical declaration distinguishing inventive steps and non-obvious combinations. `*(Ranked #1)*` `[CIT#1]`
+
 ## How to Run locally
 
 ### Prerequisites
